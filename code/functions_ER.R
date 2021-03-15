@@ -44,6 +44,7 @@ LOAD <- function(file,in.folder=NULL,dir=NULL){   #load most recent RData file, 
     FF <- list.files(paste(dir,in.folder,sep="/"))[grep(file,as.vector(list.files(paste(dir,in.folder,sep="/"))))]
     IF <- file.info(paste(dir,in.folder, FF,sep="/"))
     fileName <- paste(dir,in.folder, FF[which.max(IF$mtime)],sep="/")
+    cat(paste0("File from ",format(IF$mtime[which.max(IF$mtime)],"%d.%m.%y")))
   } else {
     fileName = file
   }
@@ -271,7 +272,7 @@ FILTER.OBS <- function(GUILD,EXCLUDE=NULL) {
   # }
   # summary(TEMP)
   ## IMport table with notes
-  REF <- data.table::setDT(read.csv2("C:/Dossier_Ervan/Guildes&co/Notes/IE_MATRICE_PRIO_20200715.csv"))
+  REF <- data.table::setDT(read.csv2("C:/Dossier_Ervan/Guildes&co/Notes/IE_MATRICE_PRIO_20210315.csv"))
   REF[,"IMS_TAXONIDCH":=TAXON_ID_CH]
   ID <- as.character(GUILD)
   REF2 <- subset(REF,GUILD%in%ID & CIBLE==1)
@@ -285,8 +286,7 @@ FILTER.OBS <- function(GUILD,EXCLUDE=NULL) {
   obs2 <- merge(OBS[,-1],unique(REF2[,c("IMS_TAXONIDCH","GROUP")]),by=c("IMS_TAXONIDCH"),all.x=TRUE)
   obs2 <- obs2[!is.na(GROUP) & !is.na(IMS_SWISSCOORDINATE_X),-c("IMS_PRIORITYCH","CIBLE")] # remove obs that are not in the guild
   table(obs2$GROUP)
-  obs2[obs2$IMT_GENUS=="Coleosporium",]
-  
+
   # add hectare ID to pictis data frame
   i <- which(obs2$IMS_SWISSCOORDINATE_Y>=100000);length(i)
   obs2[i,'CNHA'] <- paste(floor(obs2[i,IMS_SWISSCOORDINATE_X]/100),floor(obs2[i,IMS_SWISSCOORDINATE_Y]/100),sep='')
