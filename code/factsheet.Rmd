@@ -129,11 +129,9 @@ ggplot(RES2[!is.na(species),],aes(x=species,y=contribution,fill=contribution)) +
 Models are selected based on several criterion, namely AUC, Sommer D, TSS and Boyce. Those citerion are averaged (Eval_mean) and models with a mean evaluation > 0.5 are selected (models in bold). The predictions of these best (selected) models are then used to predict quality. Average predictions among these models are shown, and referred to as 'quality pred'(icted).
 
 ```{r tabmod, eval=T, echo=F,message=F,warning=F,fig.width=10,fig.height=6,fig.pos='H',tidy.opts=list(width.cutoff=50),tidy=TRUE, fig.show='asis', results='show'}
-# dir <- substr(getwd(),1,max(stringr::str_locate_all(getwd(),'/')[[1]]))
-FF <- list.files(paste0(dir,"/model"))[grep("eval_mod",list.files(paste0(dir,"/model")))]
-load(paste0(dir,"/model/",FF))
+MyModelEvaluation <- LOAD("eval_mod","model",dir)
 
-eval.lim<-0.5
+eval.lim<- guild[which(guild$ID==GUILD),]$eval.lim
 
 library(kableExtra)
 TT <- data.frame(MyModelEvaluation$mean_evaluation$model,sapply(MyModelEvaluation$mean_evaluation[,2:8],function(x) as.numeric(x)))
@@ -160,10 +158,7 @@ ggplot(VarIm,aes(x=var,y=wmean,fill=wmean)) + geom_bar(stat="identity",color="bl
 #### B.3 Watersheds clustering based on selected environmental variables 
 White polygons indicate watershed with no or <10 ha quality observed. Cluster id (cl.id) and watershed id (BV.id) are shown on mouse over.
 ```{r BV, eval=T, echo=F,message=F,warning=F,fig.width=10,fig.height=6,fig.pos='H',tidy.opts=list(width.cutoff=50),tidy=TRUE, fig.show='asis', results='show'}
-# dir <- substr(getwd(),1,max(stringr::str_locate_all(getwd(),'/')[[1]]))
-FF <- list.files(paste0(dir,"/data"))[grep("clusterBV",list.files(paste0(dir,"/data")))]
-IF <- file.info(paste(dir,"data", FF,sep="/"))
-load(paste(dir,"data", FF[which.max(IF$mtime)],sep="/"))
+BV <- LOAD("clusterBV","data",dir)
 require(data.table)
 # COL <- setDT(BV)[,.(N=length(unique(CLUST))),by=subreg][order(subreg)]
 # # COL$col <- randomcoloR::distinctColorPalette(nrow(COL)) ## 12 bioregions
@@ -198,7 +193,7 @@ Ncol <- as.numeric(tapply(BV$clust,factor(BV$bioreg),function(x) length(unique(x
 require(RColorBrewer)
 qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
 col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
-COL1=sample(col_vector, sum(Ncol))
+COL1=sample(col_vector, sum(Ncol),replace=T)
 CLUSTERS <- BV2[,1]
 names(CLUSTERS) <- c("Cluster ID","geometry")
 st_geometry(CLUSTERS) <- "geometry"
@@ -225,7 +220,7 @@ mapview::mapview(CLUSTERS,zcol="Cluster ID",col.region=COL1,legend=F,alpha.regio
   # tab[4,4] <-  paste0(round(MINMAX[1]*100/4140543,2)," - ",round(MINMAX[2]*100/4140543,2))
   # # tab[4,5] <-  paste0(round(MINMAX[1]*100/1044976,2)," - ",ifelse(round(MINMAX[2]*100/1044976,2)>100,100,round(MINMAX[2]*100/1044976,2)))
   
-  kable(tab,format="html",align=rep('c', 5),booktabs = T,col.names=c("","# ha","% CH"),caption = "<b>Table 3: Number sites (# sites) and corresponding area (area ha). proportion of Swiss territory (4140543 ha, % CH) for  observed (IST) and potential qualities, guild space, and Ergänzungsbedarf (ha).<b>") %>%
+  kable(tab,format="html",align=rep('c', 5),booktabs = T,col.names=c("","# ha","% CH"),caption = "<b>Table 3: Number sites (# sites) and corresponding area (area ha). proportion of Swiss territory (4140543 ha, % CH) for  observed (IST) and potential qualities, guild space, and Erg?nzungsbedarf (ha).<b>") %>%
   kable_styling(position = "center",c("striped"), full_width = TRUE)
 ```
 
@@ -262,7 +257,7 @@ kable(TAB1,caption = "<b>Table 4: Erganzungsbedarf (ha) bei Bioregion.<b>",col.n
 
 #### C2. Summary by watershed
 ```{r rec.tab_BV, eval=T, echo=F,message=F,warning=F,fig.width=6,fig.height=6,fig.pos='H',tidy.opts=list(width.cutoff=50),tidy=TRUE, fig.show='asis', results='show'}
-bioreg <- data.frame(bioregion=c(11, 21, 22, 23, 24, 31, 32, 41, 51, 52, 61, 62),name=c("Jura und Randen","Genferseegebiet","Rheingebiet","Oestliches Mittelland","Westliches Mittelland","Voralpen","Nordalpen","Oestliche Zentralalpen ","Westliche Zentralalpen","Engadin","Südalpen","Südlicher Tessin"))
+bioreg <- data.frame(bioregion=c(11, 21, 22, 23, 24, 31, 32, 41, 51, 52, 61, 62),name=c("Jura und Randen","Genferseegebiet","Rheingebiet","Oestliches Mittelland","Westliches Mittelland","Voralpen","Nordalpen","Oestliche Zentralalpen ","Westliche Zentralalpen","Engadin","S?dalpen","S?dlicher Tessin"))
 temp <- merge(temp,bioreg,by.x="subreg",by.y="bioregion",all.x=T)
 temp$potential_prop <- round(temp$potential_qual/temp$BV_area*100)
 temp$name <- factor(temp$name,levels=unique(temp$name[order(temp$subreg)]))

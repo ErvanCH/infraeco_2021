@@ -258,6 +258,6 @@ load("C:/Dossier_Ervan/R/Grid100/grid100_sf.Rdata")
 PRED <- merge(PRED,grid_sf[,c("grid.id","CNHA","canton","subreg","geostat","forest","urban","lac","geometry","centro")],by="grid.id",all.x=TRUE)
 PRED <- PRED[!duplicated(PRED$grid.id),]
 save(PRED,file=paste0(dir,"/data/",GUILD,"_quality_predicted_",DATE,".Rdata"))
-cat(paste0("Modeling of guilde ",GUILD," done in ",round(difftime(Sys.time(),Time1),2)," sec."), "\n")
+cat(paste0("Modeling of guilde ",GUILD," done in ", round(difftime(Sys.time(),Time1,units="mins"),2)," min."), "\n")
 
     

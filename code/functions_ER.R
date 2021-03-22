@@ -44,7 +44,7 @@ LOAD <- function(file,in.folder=NULL,dir=NULL){   #load most recent RData file, 
     FF <- list.files(paste(dir,in.folder,sep="/"))[grep(file,as.vector(list.files(paste(dir,in.folder,sep="/"))))]
     IF <- file.info(paste(dir,in.folder, FF,sep="/"))
     fileName <- paste(dir,in.folder, FF[which.max(IF$mtime)],sep="/")
-    cat(paste0("File from ",format(IF$mtime[which.max(IF$mtime)],"%d.%m.%y")))
+    cat(paste0(file, " created: ",format(IF$mtime[which.max(IF$mtime)],"%d.%m.%y")),"\n")
   } else {
     fileName = file
   }
@@ -372,7 +372,7 @@ IMPORT.OBS.GM <- function(GUILD) {
   # summary(TEMP)
 
   ## Load observations (Mamm/Chiro)
-  REF <- readxl::read_xlsx("C:/Dossier_Ervan/Guildes&co/Guildes_mobiles/Liste_sp_guildes_mobiles_update_2020-04-15.xlsx")
+  REF <- readxl::read_xlsx("C:/Dossier_Ervan/Guildes&co/Guildes_mobiles/Liste_sp_guildes_mobiles_update_2020-09-18.xlsx")
   REF$IMS_TAXONIDCH = as.factor(paste(REF$CENTRE,REF$TAXON_ID,sep=":"))
   REF$ALT_min <- as.numeric(REF$ALT_min)
   REF$ALT_max <- as.numeric(REF$ALT_max)
@@ -1411,7 +1411,7 @@ BENCH<-function(PRED,OBS,th.pred,th.bench, th.qprop=1, defrag,sd.min=TRUE) {
   
   ## Export data for priorisation
   TEMP <- PRED.dsg[,c("CNHA","grid.id","centro")]
-  save(TEMP,file=paste0(getwd(),"/data/pred_dsg",defrag,".Rdata"))
+  save(TEMP,file=paste0(dir,"/data/pred_dsg",defrag,".Rdata"))
   
   ha2add.defrag<-PRED.dsg[,.('ha2add_defrag'=as.numeric(.N)),by='BV04'] # number of disagregated ha for each BV
 
