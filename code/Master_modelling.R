@@ -5,10 +5,10 @@ source("code/functions_ER.R")
 # LOCATION <- "G://R/"# location of all folders (PC Infoflora)
 LOCATION <- "C://Dossier_Ervan/R/"# location of all folders (IF office)
 
-GUILD <- 22
+GUILD <- 20
 
 ### Select guild
-G <- c(2:4,10:13,17,19,20,22)  # nouveaux ID
+G <- c(2:4,10:13,17,19,20,22,23)  # nouveaux ID
 
 
 for (GUILD in G) {
@@ -25,8 +25,8 @@ for (GUILD in G) {
   ## Load IST Infofauna & attach grid info
   load("data/grid100_sf_with_enviro.Rdata")
   FF <- list.files("data/infofauna")[grep(paste0("_",GUILD,"_bio-idx"),list.files("data/infofauna"))]
-  ist <- read.csv(paste("data/infofauna", FF,sep="/"))
-  IST <- merge(setDT(ist),setDT(grid_sf)[,c("CNHA","grid.id","geometry")],by="CNHA",all.x=T)
+  ist <- data.table::fread(paste("data/infofauna", FF,sep="/"))
+  IST <- merge(setDT(ist),setDT(grid_sf)[,c("CNHA","grid.id","geometry","BV04")],by="CNHA",all.x=T)
   st_geometry(IST) <- "geometry" 
 
 
@@ -50,9 +50,6 @@ for (GUILD in G) {
   eg <- LOAD("EG","data",dir)
   EG <-setDT(grid_sf)[grid.id%in%c(IST$grid.id,eg$grid.id),c("grid.id","CNHA","BV04","canton","subreg","geometry","centro",..VAR)]
   EG <- EG[!duplicated(EG$grid.id),]
-  # EG1 <- setDT(EG)[,c("grid.id","CNHA","geometry")]
-  # save(EG1,file=paste0("/data/",GUILD,"_EG.RData"))
-  
   NArep(EG)
   # summary(EG)
   Q0 <- dplyr::sample_n(na.omit(data.table::setDT(EG)[!grid.id%in%Q1$grid.id]),nrow(Q1),replace=F)
@@ -125,10 +122,10 @@ for (GUILD in G) {
   ################################################
   # Part 2: Modelling
   ################################################
-  dir <- paste0(LOCATION,list.files(LOCATION)[grep(paste0("G",GUILD,"-"),list.files(LOCATION))])
-  FF <- list.files(paste(dir,"data",sep="/"))[grep("enviro4model",as.vector(list.files(paste(dir,"data",sep="/"))))]
-  IF <- file.info(paste(dir,"data", FF,sep="/"))
-  load(paste(dir,"data", FF[which.max(IF$mtime)],sep="/"))
+  # dir <- paste0(LOCATION,list.files(LOCATION)[grep(paste0("G",GUILD,"-"),list.files(LOCATION))])
+  # FF <- list.files(paste(dir,"data",sep="/"))[grep("enviro4model",as.vector(list.files(paste(dir,"data",sep="/"))))]
+  # IF <- file.info(paste(dir,"data", FF,sep="/"))
+  # load(paste(dir,"data", FF[which.max(IF$mtime)],sep="/"))
   guild <- readxl::read_xlsx("data/Guildes_revues_ER.xlsx",sheet=1,col_names = T,col_types = "guess")
   guild.info <- guild[which(guild$ID==GUILD),]
   guild.info <- guild.info %>% hablar::convert(lgl(RF,GAM,GBM,GBM_xg,ME))
@@ -139,10 +136,21 @@ for (GUILD in G) {
   # Comparaison par cluster de bassins versants
   ################################################
   options("scipen"=100, "digits"=4)
-  dir <- paste0(LOCATION,list.files(LOCATION)[grep(paste0("G",GUILD,"-"),list.files(LOCATION))])
+  # install.packages("pacman")
   pacman::p_load(sf, data.table,tidyverse,ggplot2,reshape2,qgraph,vegan,raster,hablar)
   source("code/functions_ER.R")
+  # LOCATION <- "G://R/"# location of all folders (PC Infoflora)
   LOCATION <- "C://Dossier_Ervan/R/"# location of all folders (IF office)
+  
+
+  ### Select guild
+  G <- c(2:4,10,12,13,17,19,20,22,23)  # nouveaux ID
+  for (GUILD in G) {
+  dir <- paste0(LOCATION,list.files(LOCATION)[grep(paste0("G",GUILD,"-"),list.files(LOCATION))])
+  guild <- readxl::read_xlsx("data/Guildes_revues_ER.xlsx",sheet=1,col_names = T,col_types = "guess")
+  guild.info <- guild[which(guild$ID==GUILD),]
+  guild.info <- guild.info %>% hablar::convert(lgl(RF,GAM,GBM,GBM_xg,ME))
+
   
   if (any(grep("clusterBV",list.files(paste0(dir,"/data"))))) {
     BV<- LOAD("clusterBV","data",dir)
@@ -181,8 +189,6 @@ for (GUILD in G) {
 
 
   ### Generate factsheet
- 
-
   ## Specie contribution
   # RES <- unique(data.table::data.table("group"=OBS$group,"species"=OBS$name,"bioregion"=OBS$bioregrion,"weight"=OBS$w,prop_area_ha=as.numeric(NA),prop_area_percent=as.numeric(NA)))
   # NN <- data.table::setDT(OBS)[,.(Qobs=ifelse(sum(w[!duplicated(taxonid)])>=1,1,0)),by=.(grid.id)]
@@ -195,17 +201,24 @@ for (GUILD in G) {
   # write.csv(RES,file=paste0("C://Dossier_Ervan/R/INFOFAUNA/guilde_",GUILD,"_spContribution.csv"))
 
   
-  for (GUILD in c(2:4,10,12,13,17,19,20,22)) {
+  for (GUILD in c(2:4,10,12,13,17,19,20,22,23)) {
   dir <- paste0(LOCATION,list.files(LOCATION)[grep(paste0("G",GUILD,"-"),list.files(LOCATION))])
+  guild <- readxl::read_xlsx("data/Guildes_revues_ER.xlsx",sheet=1,col_names = T,col_types = "guess")
+  bench <- guild[which(guild$ID==GUILD),]$bench
+  guild.name <- guild[which(guild$ID==GUILD),]$name_guild_de
+ 
   res <- LOAD("ha2add","data",dir)
   res <- col.bin(res,bench,min.size=5,silence=F)
   res <- res[[1]]
+   
+  TT <- readxl::read_xlsx("C://Dossier_Ervan/Guildes&co/var_enviro_selected.xlsx")
+  VAR <- TT$label[!is.na(TT[,stringr::str_which(names(TT),paste0("G",GUILD,"$"))])]
   
   rmarkdown::render(input = "code/factsheet.Rmd",
                     output_format = "html_document",
                     output_file = paste0(GUILD,"_factsheet3.html"),
                     output_dir = "D:/SIG/SIG_BAFU/factsheets_final/")
-
+}
   # Create leaflets for plausibilisation
   pacman::p_load(leafgl,leaflet,leafem,leafpop,data.table,raster,tidyverse,sf)
   res <- LOAD("ha2add","data",dir)
@@ -265,6 +278,45 @@ for (GUILD in G) {
   mapview::mapshot(m3, url =paste0("D:/SIG/SIG_BAFU/leaflets/",GUILD,"_plausi.html"))
   }
 
+  ##### PLausi guildes sans SOLL
+  for (GUILD in c(9,18,24)) {
+    GUILD=18
+    dir <- paste0(LOCATION,list.files(LOCATION)[grep(paste0("G",GUILD,"-"),list.files(LOCATION))])
+    guild <- readxl::read_xlsx("data/Guildes_revues_ER.xlsx",sheet=1,col_names = T,col_types = "guess")
+  
+    guild.name <- guild[which(guild$ID==GUILD),]$name_guild_de
+    
+    rmarkdown::render(input = "code/factsheet_sans_SOLL.Rmd",
+                      output_format = "html_document",
+                      output_file = paste0(GUILD,"_factsheet3.html"),
+                      output_dir = "D:/SIG/SIG_BAFU/factsheets_final/")
+    
+    # Create leaflets for plausibilisation
+    pacman::p_load(leafgl,leaflet,leafem,leafpop,data.table,raster,tidyverse,sf)
+    
+    load("data/grid100_sf_with_enviro.Rdata")
+    FF <- list.files("data/infofauna")[grep(paste0("_",GUILD,"_bio-idx"),list.files("data/infofauna"))]
+    ist <- read.csv(paste("data/infofauna", FF,sep="/"))
+    IST <- merge(setDT(ist),setDT(grid_sf)[,c("CNHA","grid.id","geometry")],by="CNHA",all.x=T)
+    st_geometry(IST) <- "geometry" 
+    IST <- st_transform(IST,3857)
+    grid2 <- raster::raster("D://SIG/data/grid100/grid100_3857.tif")
+    I_ra <- fasterize::fasterize(IST,grid2,field="BIOIDX_TXG")
+    col1 <- colorNumeric(palette = "viridis",IST$BIOIDX_TXG,na.color="#00000000")
+    
+    
+    m = leaflet() %>%
+      addProviderTiles(provider = providers$CartoDB.Positron,group="Positron",layerId="Positron") %>%
+      addProviderTiles(provider = providers$Esri.WorldImagery,group="Esri",layerId="Esri") %>%
+      addRasterImage(I_ra,colors=col1,method="ngb",group = "Observed qual") %>%
+      addLegend(pal =  col1, values=IST$BIOIDX_TXG,group = "Observed qual", position = "topright",opacity=0.8,title="Observed quality")
+    
+    ### Finalize leaflet
+    m3 <- m %>%
+      addLayersControl(baseGroups= c("Positron","Esri"),overlayGroups = c("Observed qual"),position="topleft") 
+    m3
+    mapview::mapshot(m3, url =paste0("D:/SIG/SIG_BAFU/leaflets/",GUILD,"_plausi.html"))
+  }
   # ##########################################################
   # # Create final leaflets
   # rm(list=setdiff(ls(),"GUILD"))

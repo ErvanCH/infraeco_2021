@@ -70,10 +70,10 @@ library(knitr)
 
 
 ```{r Tab1, eval=T, echo=F,message=F,warning=F,fig.width=6,fig.height=6,fig.pos='H',tidy.opts=list(width.cutoff=50),tidy=TRUE, fig.show='asis', results='show'}
-dir_if <- "C://Dossier_Ervan/R/INFOFAUNA"
+dir_if <- "C:/Dossier_Ervan/R/infraeco_2021/data/infofauna/spContribution"
 FF <- list.files(dir_if)[grep(paste0("_",GUILD,"_spContribution"),list.files(dir_if))]
 RES <- read.csv(paste(dir_if,FF,sep="/"))
-REF <- data.table::setDT(read.csv2("C:/Dossier_Ervan/Guildes&co/Notes/IE_MATRICE_PRIO_20200715.csv"))
+REF <- data.table::fread("C:/Dossier_Ervan/R/infraeco_2021/data/IE_MATRICE_PRIO_20210315.csv")
 TT <- stringr::word(REF$TAXON_NAME, 1, 2)
 REF$speciesCODE <- TT
 SUB <- paste0(substr(stringr::word(REF$TAXON_NAME[grep("subsp.",REF$TAXON_NAME)], 2, 2),1,3),".")

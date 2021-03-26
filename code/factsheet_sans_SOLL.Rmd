@@ -70,12 +70,11 @@ library(knitr)
 
 
 ```{r Tab1, eval=T, echo=F,message=F,warning=F,fig.width=6,fig.height=6,fig.pos='H',tidy.opts=list(width.cutoff=50),tidy=TRUE, fig.show='asis', results='show'}
-
-dir_if <- "C://Dossier_Ervan/R/INFOFAUNA"
+dir_if <- "C:/Dossier_Ervan/R/infraeco_2021/data/infofauna/spContribution"
 FF <- list.files(dir_if)[grep(paste0("_",GUILD,"_spContribution"),list.files(dir_if))]
 RES <- read.csv(paste(dir_if,FF,sep="/"))
 
-if(GUILD%in%c(9,"18a")) {
+if(GUILD%in%c(9,18)) {
   RES$speciesCODE <- stringr::word(RES$spName, 1, 2)
 }
 REF <- data.table::setDT(readxl::read_xlsx("C:/Dossier_Ervan/Guildes&co/Notes/tab_recap_20201209.xlsx",sheet=1))
@@ -94,7 +93,7 @@ kable(setDT(RES2)[,-"group"],col.names=c("Species","Contribution (%)"),caption =
  kable_styling("striped", full_width = F) %>%
  pack_rows(index=table(RES2$group), label_row_css = "background-color: #666; color: #fff;") %>% 
  scroll_box(width = "100%", height = "600px")
-SIZE <- ifelse(nrow(RES2)<10,10,ceiling(sqrt(nrow(RES2)))*2)
+Size <- ifelse(nrow(RES2)<10,10,ceiling(sqrt(nrow(RES2)))*2)
 ```
 
 #### A.2 Contribution of each species to IST
@@ -123,6 +122,19 @@ ggplot(RES2[!is.na(species),],aes(x=species,y=contribution,fill=contribution)) +
 ```
 
 </div>
+
+
+### C. Summary statistic
+```{r sumstat, eval=T, echo=F,message=F,warning=F,fig.width=6,fig.height=6,fig.pos='H',tidy.opts=list(width.cutoff=50),tidy=TRUE, fig.show='asis', results='show'}
+  path <- "C:/Dossier_Ervan/R/infraeco_2021/data/infofauna"
+  FF <- list.files(path)[grep(paste0("_",GUILD,"_bio-idx"),list.files(path))]
+  ist <- data.table::fread(paste(path,FF,sep="/"))
+  tab <- data.frame(var=c("Observed quality"),val=c(nrow(ist)))
+  tab$perc <-  round(tab$val*100/4140543,2)
+  
+  kable(tab,format="html",align=rep('c', 1),booktabs = T,col.names=c("","# ha","% CH"),caption = "<b>Table 3: Number sites (# sites) and corresponding area (area ha). proportion of Swiss territory (4140543 ha, % CH) for  observed quality <b>") %>%
+  kable_styling(position = "center",c("striped"), full_width = TRUE)
+```
 
 
 
