@@ -9171,37 +9171,37 @@ nism:2459;nism;BRYO;2459;Weissia condensa (Voit) Lindb.;4;1984;NA;NA;NA;250;CH;2
 nism:2466;nism;BRYO;2466;Weissia longifolia Mitt.;;1984;NA;NA;NA;250;CH;22;0.2;1
 infoflora:455200;infoflora;TRAC;455200;Xanthium strumarium L.;3;2000;NA;NA;NA;250;CH;22;0.2;1
 infofauna:59824;infofauna;APID;59824;Xylocopa violacea;4;2000;NA;NA;NA;250;CH;22;0.2;1
-vogelwarte:3270;vogelwarte;AVES;3270;Apus apus (Linnaeus, 1758);1;2000;NA;NA;NA;250;CH;23;1;1
-vogelwarte:3260;vogelwarte;AVES;3260;Apus melba (Linnaeus, 1758);1;2000;NA;NA;NA;250;CH;23;1;1
-vogelwarte:3280;vogelwarte;AVES;3280;Apus pallidus;;2000;NA;NA;NA;250;CH;23;1;1
-vogelwarte:500;vogelwarte;AVES;500;Ciconia ciconia (Linnaeus, 1758);1;2000;NA;NA;NA;250;CH;23;1;1
-vogelwarte:3710;vogelwarte;AVES;3710;Corvus monedula Linnaeus, 1758;1;2000;NA;NA;NA;250;CH;23;1;1
-vogelwarte:3640;vogelwarte;AVES;3640;Delichon urbicum (Linnaeus, 1758);1;2000;NA;NA;NA;250;CH;23;1;1
-vogelwarte:1480;vogelwarte;AVES;1480;Falco tinnunculus Linnaeus, 1758;1;2000;NA;NA;NA;250;CH;23;1;1
-vogelwarte:3610;vogelwarte;AVES;3610;Hirundo rustica;;2000;NA;NA;NA;250;CH;23;1;1
-vogelwarte:3630;vogelwarte;AVES;3630;Ptyonoprogne rupestris Scopoli, 1769;3;2000;NA;NA;NA;250;CH;23;1;1
-vogelwarte:3070;vogelwarte;AVES;3070;Tyto alba (Scopoli, 1769);1;2000;NA;NA;NA;250;CH;23;1;1
-infofauna:70707;infofauna;CHIR;70707;Eptesicus nilssonii;1;2000;NA;NA;NA;NA;JU/NA/WE/EA/SA;23;1;1
-infofauna:70708;infofauna;CHIR;70708;Eptesicus serotinus;1;2000;NA;NA;NA;NA;CH;23;1;1
-infofauna:70709;infofauna;CHIR;70709;Hypsugo savii;n;2000;NA;NA;NA;NA;CH;23;1;1
-infofauna:70712;infofauna;CHIR;70712;Myotis blythii;1;2000;NA;NA;NA;NA;SA/WE/EA;23;1;1
-infofauna:sp. nov.;infofauna;CHIR;sp. nov.;Myotis crypticus;;2000;NA;NA;NA;NA;?;23;1;1
-infofauna:70715;infofauna;CHIR;70715;Myotis daubentonii;n;2000;NA;NA;NA;NA;CH;23;1;1
-infofauna:70716;infofauna;CHIR;70716;Myotis emarginatus;1;2000;NA;NA;NA;NA;CH;23;1;1
-infofauna:70717;infofauna;CHIR;70717;Myotis myotis;1;2000;NA;NA;NA;NA;CH;23;1;1
-infofauna:70719;infofauna;CHIR;70719;Myotis mystacinus;n;2000;NA;NA;NA;NA;CH;23;1;1
-infofauna:70722;infofauna;CHIR;70722;Myotis nattereri;1;2000;NA;NA;NA;NA;CH;23;1;1
-infofauna:70726;infofauna;CHIR;70726;Nyctalus noctula;4;2000;NA;NA;NA;NA;CH;23;1;1
-infofauna:70728;infofauna;CHIR;70728;Pipistrellus kuhlii;n;2000;NA;NA;NA;NA;CH;23;1;1
-infofauna:70729;infofauna;CHIR;70729;Pipistrellus nathusii;n;2000;NA;NA;NA;NA;CH;23;1;1
-infofauna:70730;infofauna;CHIR;70730;Pipistrellus pipistrellus;n;2000;NA;NA;NA;NA;CH;23;1;1
-infofauna:70737;infofauna;CHIR;70737;Pipistrellus pygmaeus;n;2000;NA;NA;NA;NA;CH;23;1;1
-infofauna:70732;infofauna;CHIR;70732;Plecotus auritus;1;2000;NA;NA;NA;NA;CH;23;1;1
-infofauna:70733;infofauna;CHIR;70733;Plecotus austriacus;1;2000;NA;NA;NA;NA;JU/MP;23;1;1
-infofauna:70833;infofauna;CHIR;70833;Plecotus macrobullaris;1;2000;NA;NA;NA;NA;SA/WE/EA;23;1;1
-infofauna:70700;infofauna;CHIR;70700;Rhinolophus ferrumequinum ;1;2000;NA;NA;NA;NA;WE/EA;23;1;1
-infofauna:70701;infofauna;CHIR;70701;Rhinolophus hipposideros;1;2000;NA;NA;NA;NA;CH;23;1;1
-infofauna:70736;infofauna;CHIR;70736;Vespertilio murinus;1;2000;NA;NA;NA;NA;CH;23;1;1
+vogelwarte:3270;vogelwarte;AVES;3270;Apus apus (Linnaeus, 1758);1;2000;NA;NA;NA;250;CH;24;1;1
+vogelwarte:3260;vogelwarte;AVES;3260;Apus melba (Linnaeus, 1758);1;2000;NA;NA;NA;250;CH;24;1;1
+vogelwarte:3280;vogelwarte;AVES;3280;Apus pallidus;;2000;NA;NA;NA;250;CH;24;1;1
+vogelwarte:500;vogelwarte;AVES;500;Ciconia ciconia (Linnaeus, 1758);1;2000;NA;NA;NA;250;CH;24;1;1
+vogelwarte:3710;vogelwarte;AVES;3710;Corvus monedula Linnaeus, 1758;1;2000;NA;NA;NA;250;CH;24;1;1
+vogelwarte:3640;vogelwarte;AVES;3640;Delichon urbicum (Linnaeus, 1758);1;2000;NA;NA;NA;250;CH;24;1;1
+vogelwarte:1480;vogelwarte;AVES;1480;Falco tinnunculus Linnaeus, 1758;1;2000;NA;NA;NA;250;CH;24;1;1
+vogelwarte:3610;vogelwarte;AVES;3610;Hirundo rustica;;2000;NA;NA;NA;250;CH;24;1;1
+vogelwarte:3630;vogelwarte;AVES;3630;Ptyonoprogne rupestris Scopoli, 1769;3;2000;NA;NA;NA;250;CH;24;1;1
+vogelwarte:3070;vogelwarte;AVES;3070;Tyto alba (Scopoli, 1769);1;2000;NA;NA;NA;250;CH;24;1;1
+infofauna:70707;infofauna;CHIR;70707;Eptesicus nilssonii;1;2000;NA;NA;NA;NA;JU/NA/WE/EA/SA;24;1;1
+infofauna:70708;infofauna;CHIR;70708;Eptesicus serotinus;1;2000;NA;NA;NA;NA;CH;24;1;1
+infofauna:70709;infofauna;CHIR;70709;Hypsugo savii;n;2000;NA;NA;NA;NA;CH;24;1;1
+infofauna:70712;infofauna;CHIR;70712;Myotis blythii;1;2000;NA;NA;NA;NA;SA/WE/EA;24;1;1
+infofauna:sp. nov.;infofauna;CHIR;sp. nov.;Myotis crypticus;;2000;NA;NA;NA;NA;?;24;1;1
+infofauna:70715;infofauna;CHIR;70715;Myotis daubentonii;n;2000;NA;NA;NA;NA;CH;24;1;1
+infofauna:70716;infofauna;CHIR;70716;Myotis emarginatus;1;2000;NA;NA;NA;NA;CH;24;1;1
+infofauna:70717;infofauna;CHIR;70717;Myotis myotis;1;2000;NA;NA;NA;NA;CH;24;1;1
+infofauna:70719;infofauna;CHIR;70719;Myotis mystacinus;n;2000;NA;NA;NA;NA;CH;24;1;1
+infofauna:70722;infofauna;CHIR;70722;Myotis nattereri;1;2000;NA;NA;NA;NA;CH;24;1;1
+infofauna:70726;infofauna;CHIR;70726;Nyctalus noctula;4;2000;NA;NA;NA;NA;CH;24;1;1
+infofauna:70728;infofauna;CHIR;70728;Pipistrellus kuhlii;n;2000;NA;NA;NA;NA;CH;24;1;1
+infofauna:70729;infofauna;CHIR;70729;Pipistrellus nathusii;n;2000;NA;NA;NA;NA;CH;24;1;1
+infofauna:70730;infofauna;CHIR;70730;Pipistrellus pipistrellus;n;2000;NA;NA;NA;NA;CH;24;1;1
+infofauna:70737;infofauna;CHIR;70737;Pipistrellus pygmaeus;n;2000;NA;NA;NA;NA;CH;24;1;1
+infofauna:70732;infofauna;CHIR;70732;Plecotus auritus;1;2000;NA;NA;NA;NA;CH;24;1;1
+infofauna:70733;infofauna;CHIR;70733;Plecotus austriacus;1;2000;NA;NA;NA;NA;JU/MP;24;1;1
+infofauna:70833;infofauna;CHIR;70833;Plecotus macrobullaris;1;2000;NA;NA;NA;NA;SA/WE/EA;24;1;1
+infofauna:70700;infofauna;CHIR;70700;Rhinolophus ferrumequinum ;1;2000;NA;NA;NA;NA;WE/EA;24;1;1
+infofauna:70701;infofauna;CHIR;70701;Rhinolophus hipposideros;1;2000;NA;NA;NA;NA;CH;24;1;1
+infofauna:70736;infofauna;CHIR;70736;Vespertilio murinus;1;2000;NA;NA;NA;NA;CH;24;1;1
 infofauna:70110;infofauna;AMPH;70110;Alytes obstetricans (Laurenti, 1768);3;2000;NA;NA;NA;250;CH;26;1;1
 infofauna:70111;infofauna;AMPH;70111;Bombina variegata (Linnaeus, 1758);3;2000;NA;NA;NA;250;CH;26;1;1
 infofauna:70113;infofauna;AMPH;70113;Bufo bufo (Linnaeus, 1758);4;2000;NA;NA;NA;250;CH;26;1;1
@@ -9278,3 +9278,627 @@ infofauna:70163;infofauna;REPT;70163;Vipera aspis;2;1985;NA;NA;NA;250;CH;25;1;1
 infofauna:70164;infofauna;REPT;70164;Vipera berus;3;1985;NA;NA;NA;250;CH;25;1;1
 infofauna:70159;infofauna;REPT;70159;Zamenis longissimus;3;1985;NA;NA;NA;250;CH;25;1;1
 infofauna:70153;infofauna;REPT;70153;Zootoca vivipara;;1985;NA;NA;NA;250;CH;25;1;1
+infofauna:18411;infofauna;COLEca;18411;Abax oblongus (Dejean, 1831);1;2000;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:22460;swissfungi;FUNG;22460;Abrothallus caerulescens;;1985;NA;NA;NA;250;CH;21;0.2;1
+infoflora:1000;infoflora;TRAC;1000;Achillea atrata L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:1500;infoflora;TRAC;1500;Achillea erba-rotta subsp. moschata (Wulfen) Vacc.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:1900;infoflora;TRAC;1900;Achillea nana L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:2700;infoflora;TRAC;2700;Achnatherum calamagrostis (L.) P. Beauv.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:3100;infoflora;TRAC;3100;Aconitum anthora L.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:5600;infoflora;TRAC;5600;Adenostyles leucophylla (Willd.) Rchb.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:7000;infoflora;TRAC;7000;Aethionema saxatile (L.) R. Br.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:614;swisslichens;LICH;614;aff. Lecania cyrtellina (Nyl.) Sandst.;4;1989;NA;NA;NA;250;CH;21;0.2;NPA
+swisslichens:39;swisslichens;LICH;39;Alectoria nigricans;;1989;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:40;swisslichens;LICH;40;Alectoria ochroleuca;;1989;NA;NA;NA;250;CH;21;0.2;1
+nism:3015;nism;BRYO;3015;Aloina aloides (Schultz) Kindb.;2;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:497;nism;BRYO;497;Aloina rigida (Hedw.) Limpr.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:26600;infoflora;TRAC;26600;Alyssoides utriculata (L.) Moench;4;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:498;nism;BRYO;498;Amblyodon dealbatus (Hedw.) P.Beauv.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:540;nism;BRYO;540;Amphidium lapponicum (Hedw.) Schimp.;;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:13;nism;BRYO;13;Anastrophyllum assimile (Mitt.) Steph.;2;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:550;nism;BRYO;550;Andreaea crassinervia Bruch;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:553;nism;BRYO;553;Andreaea frigida Huebener;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2524;nism;BRYO;2524;Andreaea heinemannii Hampe & Müll.Hal.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:3041;nism;BRYO;3041;Andreaea heinemannii Hampe & Müll.Hal. subsp. heinemannii;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:559;nism;BRYO;559;Andreaea rothii F.Weber & D.Mohr subsp. rothii;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2730;nism;BRYO;2730;Andreaea rothii subsp. falcata (Schimp.) Lindb.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:31300;infoflora;TRAC;31300;Androsace alpina (L.) Lam.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:32100;infoflora;TRAC;32100;Androsace helvetica (L.) All.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:32200;infoflora;TRAC;32200;Androsace lactea L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:32600;infoflora;TRAC;32600;Androsace pubescens DC.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:32900;infoflora;TRAC;32900;Androsace vandellii (Turra) Chiov.;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:566;nism;BRYO;566;Anoectangium aestivum (Hedw.) Mitt.;;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:3050;nism;BRYO;3050;Anoectangium hornschuchianum (Hook.) Hornsch.;1;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:568;nism;BRYO;568;Anoectangium hornschuchianum aggr.;1;2000;NA;NA;NA;250;CH;21;1;1
+nism:570;nism;BRYO;570;Anoectangium schliephackei (Schlieph.) Paris;1;2000;NA;NA;NA;250;CH;21;1;1
+nism:572;nism;BRYO;572;Anoectangium sendtnerianum Bruch & Schimp.;1;2000;NA;NA;NA;250;CH;21;1;1
+nism:576;nism;BRYO;576;Anoectangium taeniatifolium (Herzog) M.O.Hill;1;2000;NA;NA;NA;250;CH;21;1;1
+nism:574;nism;BRYO;574;Anoectangium tenuinerve (Limpr.) Paris;1;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:34200;infoflora;TRAC;34200;Anogramma leptophylla (L.) Link;2;2000;NA;NA;NA;250;CH;21;0.2;1
+vogelwarte:3260;vogelwarte;AVES;3260;Apus melba (Linnaeus, 1758);1;2000;NA;NA;NA;250;CH;21;0.2;1
+vogelwarte:1200;vogelwarte;AVES;1200;Aquila chrysaetos (Linnaeus, 1758);2;2000;NA;NA;NA;250;CH;21;1;1
+infoflora:39000;infoflora;TRAC;39000;Aquilegia einseleana F. W. Schultz;2;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:39800;infoflora;TRAC;39800;Arabis bellidifolia subsp. stellulata (Bertol.) Greuter & Burdet;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:41800;infoflora;TRAC;41800;Arabis serpillifolia Vill.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:32913;infofauna;LEPI;32913;Arctia flavia;4;2000;NA;NA;NA;250;CH;21;1;1
+nism:600;nism;BRYO;600;Arctoa fulvella (Dicks.) Bruch & Schimp.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:43900;infoflora;TRAC;43900;Arenaria grandiflora L.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:44200;infoflora;TRAC;44200;Arenaria multicaulis L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:46500;infoflora;TRAC;46500;Artemisia borealis Pall.;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:47000;infoflora;TRAC;47000;Artemisia genipi Weber;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:47200;infoflora;TRAC;47200;Artemisia glacialis L.;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:47500;infoflora;TRAC;47500;Artemisia nivalis Braun-Blanq.;1;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:47700;infoflora;TRAC;47700;Artemisia umbelliformis Lam.;;2000;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25613;swissfungi;FUNG;25613;Arthonia glacialis;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25440;swissfungi;FUNG;25440;Arthonia neglectula;;1985;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:101;swisslichens;LICH;101;Arthrorhaphis vacillans;2;1989;NA;NA;NA;250;CH;21;0.2;1
+infoflora:51600;infoflora;TRAC;51600;Asplenium ×alternifolium Wulfen;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:50100;infoflora;TRAC;50100;Asplenium billotii F. W. Schultz;1;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:50300;infoflora;TRAC;50300;Asplenium cuneifolium Viv.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:50400;infoflora;TRAC;50400;Asplenium fissum Willd.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:50500;infoflora;TRAC;50500;Asplenium fontanum (L.) Bernh.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:50600;infoflora;TRAC;50600;Asplenium foreziense Magnier;2;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:38;nism;BRYO;38;Asterella saccata (Wahlenb.) A.Evans;2;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:55400;infoflora;TRAC;55400;Athamanta cretensis L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:55600;infoflora;TRAC;55600;Athyrium distentifolium Opiz;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:707;nism;BRYO;707;Bartramia subulata Bruch & Schimp.;2;2000;NA;NA;NA;250;CH;21;1;1
+nism:3096;nism;BRYO;3096;Bartramia subulata Bruch & Schimp. subsp. subulata;2;2000;NA;NA;NA;250;CH;21;1;1
+infofauna:18200;infofauna;COLEca;18200;Bembidion glaciale;;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:18202;infofauna;COLEca;18202;Bembidion jacqueti;;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:18591;infofauna;COLEca;18591;Bembidion magellense alpicola;;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:18201;infofauna;COLEca;18201;Bembidion pyrenaeumpoenini;;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:18203;infofauna;COLEca;18203;Bembidion rhaeticum Heer, 1837;4;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:711;nism;BRYO;711;Blindia caespiticia (F.Weber & D.Mohr) Müll.Hal.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infofauna:70111;infofauna;AMPH;70111;Bombina variegata;3;2000;NA;NA;NA;250;CH;21;1;1
+nism:713;nism;BRYO;713;Brachydontium trichodes (F.Weber) Milde;2;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:762;nism;BRYO;762;Brachytheciastrum trachypodium (Brid.) Ignatov & Huttunen;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:773;nism;BRYO;773;Braunia alopecura (Brid.) Limpr.;1;1984;NA;NA;NA;250;CH;21;0.2;1
+infofauna:27508;infofauna;LEPI;27508;Brevantennia siederi;3;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:789;nism;BRYO;789;Bryoerythrophyllum alpigenum (Venturi) P.C.Chen;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:796;nism;BRYO;796;Bryoerythrophyllum rubrum (Geh.) P.C.Chen;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:816;nism;BRYO;816;Bryum arcticum (R.Br.) Bruch & Schimp.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:905;nism;BRYO;905;Bryum intermedium (Brid.) Blandow;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:920;nism;BRYO;920;Bryum mildeanum Jur.;2;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:921;nism;BRYO;921;Bryum muehlenbeckii Bruch & Schimp.;2;1984;NA;NA;NA;250;CH;21;0.2;1
+vogelwarte:3090;vogelwarte;AVES;3090;Bubo bubo (Linnaeus, 1758);1;2000;NA;NA;NA;250;CH;21;1;1
+swisslichens:1950;swisslichens;LICH;1950;Buellia elegans;3;1989;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:1957;swisslichens;LICH;1957;Buellia insignis;;1989;NA;NA;NA;250;CH;21;0.2;1
+infoflora:70300;infoflora;TRAC;70300;Bupleurum stellatum L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:71950;infoflora;TRAC;71950;Calamintha nepeta (L.) Savi;;2000;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:3089;swisslichens;LICH;3089;Caloplaca jungermanniae;;1989;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:3049;swisslichens;LICH;3049;Caloplaca livida;;1989;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:3099;swisslichens;LICH;3099;Caloplaca sinapisperma;;1989;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:3098;swisslichens;LICH;3098;Caloplaca tetraspora;;1989;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:3090;swisslichens;LICH;3090;Caloplaca tiroliensis;;1989;NA;NA;NA;250;CH;21;0.2;1
+infoflora:75000;infoflora;TRAC;75000;Campanula cenisia L.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:75200;infoflora;TRAC;75200;Campanula cochleariifolia Lam.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:75500;infoflora;TRAC;75500;Campanula excisa Murith;4;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:1049;nism;BRYO;1049;Campylopus oerstedianus (Müll.Hal.) Mitt.;1;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1051;nism;BRYO;1051;Campylopus pilifer Brid.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:4396;nism;BRYO;4396;Campylopus pilifer Brid. subsp. pilifer;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1062;nism;BRYO;1062;Campylostelium saxicola (F.Weber & D.Mohr) Bruch & Schimp.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25647;swissfungi;FUNG;25647;Capronia thamnoliae;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25317;swissfungi;FUNG;25317;Carbonea vitellinaria;;1985;NA;NA;NA;250;CH;21;0.2;1
+infoflora:80800;infoflora;TRAC;80800;Cardaminopsis arenosa subsp. borbasii (Zapa?.) H. Scholz;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:84100;infoflora;TRAC;84100;Carex brachystachys Schrank;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:87300;infoflora;TRAC;87300;Carex fimbriata Schkuhr;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:90400;infoflora;TRAC;90400;Carex mucronata All.;;2000;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:3121;swisslichens;LICH;3121;Catapyrenium daedaleum;4;1989;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25624;swissfungi;FUNG;25624;Catillaria stereocaulorum;;1985;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:325;swisslichens;LICH;325;Catolechia wahlenbergii;4;1989;NA;NA;NA;250;CH;21;0.2;1
+infoflora:101500;infoflora;TRAC;101500;Centranthus angustifolius (Mill.) DC.;3;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:112;nism;BRYO;112;Cephaloziella massalongi (Spruce) Müll.Frib.;4;2000;NA;NA;NA;250;CH;21;1;1
+nism:113;nism;BRYO;113;Cephaloziella phyllacantha (C.Massal. & Carestia) Müll.Frib.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:102900;infoflora;TRAC;102900;Cerastium austroalpinum Kunz;2;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:104200;infoflora;TRAC;104200;Cerastium latifolium L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:104600;infoflora;TRAC;104600;Cerastium pedunculatum Gaudin;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:105400;infoflora;TRAC;105400;Cerastium uniflorum Clairv.;;2000;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25736;swissfungi;FUNG;25736;Cercidospora cecidiiformans;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:11087;swissfungi;FUNG;11087;Cercidospora epipolytropa;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25615;swissfungi;FUNG;25615;Cercidospora thamnoliicola;;1985;NA;NA;NA;250;CH;21;0.2;1
+infofauna:8121;infofauna;MOLL;8121;Charpentieria dyodon (S. Studer, 182);1;2000;NA;NA;NA;250;CH;21;1;1
+infofauna:8260;infofauna;MOLL;8260;Chilostoma achates achates (Rossmässler, 1835);1;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:8258;infofauna;MOLL;8258;Chilostoma adelozona adelozona (Strobel, 1857);1;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:8259;infofauna;MOLL;8259;Chilostoma adelozona rhaeticum (Strobel, 1857);2;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:8261;infofauna;MOLL;8261;Chilostoma cingulatum cingulatum;1;2000;NA;NA;NA;250;CH;21;1;1
+infofauna:8279;infofauna;MOLL;8279;Chilostoma cingulatum tigrinum (De Cristofori & Jan, 1832);1;2000;NA;NA;NA;250;CH;21;0.2;NPA
+infofauna:8264;infofauna;MOLL;8264;Chilostoma glaciale (A. Férussac, 1832);1;2000;NA;NA;NA;250;CH;21;0.2;NPA
+infofauna:8262;infofauna;MOLL;8262;Chilostoma zonatum (S. Studer, 182);4;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:8076;infofauna;MOLL;8076;Chondrina generosensis H. Nordsieck, 1962;1;2000;NA;NA;NA;250;CH;21;1;1
+infofauna:8077;infofauna;MOLL;8077;Chondrina megacheilos (De Cristofori & Jan, 1832);1;2000;NA;NA;NA;250;CH;21;1;1
+swisslichens:420;swisslichens;LICH;420;Cladonia strepsilis;2;1989;NA;NA;NA;250;CH;21;0.2;1
+nism:41;nism;BRYO;41;Clevea hyalina (Sommerf.) Lindb.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1102;nism;BRYO;1102;Cnestrum schisti (F.Weber & D.Mohr) I.Hagen, nom. cons.;2;2000;NA;NA;NA;250;CH;21;1;1
+nism:129;nism;BRYO;129;Cololejeunea calcarea (Lib.) Steph.;;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:132;nism;BRYO;132;Cololejeunea rossettiana (C.Massal.) Schiffn.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2521;nism;BRYO;2521;Conardia compacta (Müll.Hal.) H.Rob.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25829;swissfungi;FUNG;25829;Corticium silviae;;1985;NA;NA;NA;250;CH;21;0.2;1
+infoflora:123900;infoflora;TRAC;123900;Crepis kerneri Rech. f.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:124700;infoflora;TRAC;124700;Crepis pygmaea L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:124900;infoflora;TRAC;124900;Crepis rhaetica Hegetschw.;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:125500;infoflora;TRAC;125500;Crepis terglouensis (Hacq.) A. Kern.;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:2540;nism;BRYO;2540;Crossidium aberrans Holz. & E.B.Bartram;1;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1125;nism;BRYO;1125;Crossidium squamiferum (Viv.) Jur.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1137;nism;BRYO;1137;Cynodontium bruntonii (Sm.) Bruch & Schimp.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1142;nism;BRYO;1142;Cynodontium gracilescens (F.Weber & D.Mohr) Schimp.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1148;nism;BRYO;1148;Cynodontium tenellum Limpr.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1150;nism;BRYO;1150;Cyrtomnium hymenophylloides (Huebener) T.J.Kop.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:130500;infoflora;TRAC;130500;Cystopteris alpina (Lam.) Desv.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:130800;infoflora;TRAC;130800;Cystopteris montana (Lam.) Desv.;;2000;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:3205;swisslichens;LICH;3205;Dactylina madreporiformis;1;1989;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:3206;swisslichens;LICH;3206;Dactylina ramulosa;;1989;NA;NA;NA;250;CH;21;0.2;1
+infofauna:27513;infofauna;LEPI;27513;Dahlica goppensteinensis;2;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:27518;infofauna;LEPI;27518;Dahlica simplonica;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:27519;infofauna;LEPI;27519;Dahlica ticinensis;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:27522;infofauna;LEPI;27522;Dahlica vaudella Hättenschwiler, 199;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:133300;infoflora;TRAC;133300;Daphne alpina L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:136100;infoflora;TRAC;136100;Dianthus gratianopolitanus Vill.;3;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:1188;nism;BRYO;1188;Dicranodontium asperulum (Mitt.) Broth.;2;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:638;nism;BRYO;638;Didymodon cordatus Jur.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:678;nism;BRYO;678;Didymodon glaucus Ryan;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2701;nism;BRYO;2701;Didymodon johansenii (R.S.Williams) H.A.Crum;4;2000;NA;NA;NA;250;CH;21;1;1
+nism:684;nism;BRYO;684;Didymodon sinuosus (Mitt.) Delogne;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2702;nism;BRYO;2702;Didymodon subandreaeoides (Kindb.) R.H.Zander;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:680;nism;BRYO;680;Didymodon verbanus (W.E.Nicholson & Dixon) Loeske;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:696;nism;BRYO;696;Didymodon vinealis (Brid.) R.H.Zander;2;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1251;nism;BRYO;1251;Ditrichum lineare (Sw.) Lindb.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:139700;infoflora;TRAC;139700;Doronicum clusii (All.) Tausch;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:140000;infoflora;TRAC;140000;Doronicum grandiflorum Lam.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:140700;infoflora;TRAC;140700;Draba dubia Suter;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:140800;infoflora;TRAC;140800;Draba fladnizensis Wulfen;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:140900;infoflora;TRAC;140900;Draba hoppeana Rchb.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:141000;infoflora;TRAC;141000;Draba incana L.;1;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:141100;infoflora;TRAC;141100;Draba ladina Braun-Blanq.;2;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:141550;infoflora;TRAC;141550;Draba thomasii W. D. J. Koch;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:141600;infoflora;TRAC;141600;Draba tomentosa Clairv.;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:2180;nism;BRYO;2180;Drepanocladus turgescens (T.Jensen) Broth.;1;2000;NA;NA;NA;250;CH;21;1;1
+infoflora:143900;infoflora;TRAC;143900;Dryopteris villarii (Bellardi) Schinz & Thell.;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:1296;nism;BRYO;1296;Encalypta longicolla Bruch;1;1984;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25617;swissfungi;FUNG;25617;Endococcus macrosporus;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:11117;swissfungi;FUNG;11117;Endococcus perpusillus;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25746;swissfungi;FUNG;25746;Endohyalina insularis;;1985;NA;NA;NA;250;CH;21;0.2;1
+nism:1309;nism;BRYO;1309;Entodon schleicheri (Schimp.) Demet.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:147900;infoflora;TRAC;147900;Epilobium collinum C. C. Gmel.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:148500;infoflora;TRAC;148500;Epilobium lanceolatum Sebast. & Mauri;2;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:31221;infofauna;LEPI;31221;Erebia gorge;;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:31233;infofauna;LEPI;31233;Erebia pluto;;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:31235;infofauna;LEPI;31235;Erebia styx;1;2000;NA;NA;NA;250;CH;21;1;1
+infoflora:154400;infoflora;TRAC;154400;Erigeron gaudinii Brügger;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:155100;infoflora;TRAC;155100;Erinus alpinus L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:155700;infoflora;TRAC;155700;Eritrichium nanum (L.) Gaudin;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:158200;infoflora;TRAC;158200;Erysimum ochroleucum (Schleich.) DC.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:27531;infofauna;LEPI;27531;Eumasia parietariella;;2000;NA;NA;NA;250;CH;21;0.2;1
+vogelwarte:1420;vogelwarte;AVES;1420;Falco peregrinus Tunstall, 1771;2;2000;NA;NA;NA;250;CH;21;1;1
+infoflora:165700;infoflora;TRAC;165700;Festuca alpina Suter;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:170400;infoflora;TRAC;170400;Festuca rupicaprina (Hack.) A. Kern.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:170900;infoflora;TRAC;170900;Festuca stenantha (Hack.) K. Richt.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:172300;infoflora;TRAC;172300;Filago arvensis L.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:144;nism;BRYO;144;Fossombronia angulosa (Dicks.) Raddi;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:153;nism;BRYO;153;Frullania inflata Gottsche;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:176400;infoflora;TRAC;176400;Galeopsis angustifolia Hoffm.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:176600;infoflora;TRAC;176600;Galeopsis ladanum L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:176900;infoflora;TRAC;176900;Galeopsis segetum Neck.;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:178800;infoflora;TRAC;178800;Galium megalospermum All.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:182960;infoflora;TRAC;182960;Gentiana bavarica subsp. subacaulis (Schleich.) G. Mull.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:184400;infoflora;TRAC;184400;Gentiana orbicularis Schur;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:185100;infoflora;TRAC;185100;Gentiana schleicheri (Vacc.) Kunz;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:189500;infoflora;TRAC;189500;Geum reptans L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:8079;infofauna;MOLL;8079;Granaria illyrica (Rossmässler, 1835);3;2000;NA;NA;NA;250;CH;21;0.2;NPA
+infofauna:8081;infofauna;MOLL;8081;Granopupa granum (Draparnaud, 181);2;2000;NA;NA;NA;250;CH;21;1;1
+nism:1437;nism;BRYO;1437;Grimmia atrata Hornsch.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1441;nism;BRYO;1441;Grimmia decipiens (Schultz) Lindb.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1448;nism;BRYO;1448;Grimmia elongata Kaulf.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1435;nism;BRYO;1435;Grimmia fuscolutea Hook.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:293;nism;BRYO;293;Gymnomitrion adustum Nees;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:295;nism;BRYO;295;Gymnomitrion alpinum (Husn.) Schiffn.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:303;nism;BRYO;303;Gymnomitrion commutatum (Limpr.) Schiffn.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:165;nism;BRYO;165;Gymnomitrion obtusum Lindb.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2717;nism;BRYO;2717;Gymnomitrion revolutum (Nees) H.Philib.;2;2000;NA;NA;NA;250;CH;21;1;1
+nism:2510;nism;BRYO;2510;Gymnostomum viridulum Brid.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+vogelwarte:1320;vogelwarte;AVES;1320;Gypaetus barbatus (Linnaeus, 1758);1;2000;NA;NA;NA;250;CH;21;1;1
+nism:2324;nism;BRYO;2324;Haplocladium angustifolium (Hampe & Müll.Hal.) Broth.;3;2000;NA;NA;NA;250;CH;21;1;1
+nism:2708;nism;BRYO;2708;Harpalejeunea molleri (Steph.) Grolle;4;2000;NA;NA;NA;250;CH;21;1;1
+infofauna:18284;infofauna;COLEca;18284;Harpalus solitaris;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:2642;nism;BRYO;2642;Hedwigia stellata Hedenäs;4;2000;NA;NA;NA;250;CH;21;1;1
+nism:1996;nism;BRYO;1996;Hennediella heimii (Hedw.) R.H.Zander;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:199200;infoflora;TRAC;199200;Herniaria alpina Chaix;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:1501;nism;BRYO;1501;Herzogiella striatella (Brid.) Z.Iwats.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:199800;infoflora;TRAC;199800;Hieracium alpicola Steud. & Hochst.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:200000;infoflora;TRAC;200000;Hieracium amplexicaule L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:200700;infoflora;TRAC;200700;Hieracium bupleuroides C. C. Gmel.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:201600;infoflora;TRAC;201600;Hieracium glaucum All.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:201800;infoflora;TRAC;201800;Hieracium humile Jacq.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:201900;infoflora;TRAC;201900;Hieracium intybaceum All.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:204700;infoflora;TRAC;204700;Hieracium schmidtii aggr.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:205500;infoflora;TRAC;205500;Hieracium tomentosum L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:32939;infofauna;LEPI;32939;Holoarctia cervini;1;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:210100;infoflora;TRAC;210100;Hypericum coris L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:1575;nism;BRYO;1575;Hypnum bambergeri Schimp.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1600;nism;BRYO;1600;Hypnum hamulosum Schimp.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1633;nism;BRYO;1633;Hypnum sauteri Schimp.;2;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:212600;infoflora;TRAC;212600;Iberis intermedia Guers.;2;2000;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:11124;swissfungi;FUNG;11124;Karschia talcophila;;1985;NA;NA;NA;250;CH;21;0.2;1
+infoflora:221000;infoflora;TRAC;221000;Kernera saxatilis (L.) Sweet;;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:18434;infofauna;COLEca;18434;Laemostenus macropus (Chaudoir, 1861);4;2000;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25622;swissfungi;FUNG;25622;Lambiella insularis;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25625;swissfungi;FUNG;25625;Lasiosphaeriopsis stereocaulicola;;1985;NA;NA;NA;250;CH;21;0.2;1
+infofauna:8066;infofauna;MOLL;8066;Lauria cylindracea;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:8067;infofauna;MOLL;8067;Lauria sempronii;2;2000;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:1202;swisslichens;LICH;1202;Lecidea lurida;3;1989;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:3513;swisslichens;LICH;3513;Lecidella wulfenii;;1989;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:806;swisslichens;LICH;806;Lecidoma demissum;;1989;NA;NA;NA;250;CH;21;0.2;1
+infofauna:18588;infofauna;COLEca;18588;Leistus montanus montanus Stephens, 1827;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:90040;infofauna;COLEca;90040;Leistus montanus rhaeticus Heer, 1837;4;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:2496;nism;BRYO;2496;Lejeunea lamacerina (Steph.) Schiffn.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:233400;infoflora;TRAC;233400;Leontodon hispidus subsp. hyoseroides (Rchb.) Murr;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:233600;infoflora;TRAC;233600;Leontodon hispidus subsp. pseudocrispus (Bisch.) Murr;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:234000;infoflora;TRAC;234000;Leontodon montanus Lam.;;2000;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:824;swisslichens;LICH;824;Leprocaulon microscopicum;;1989;NA;NA;NA;250;CH;21;0.2;1
+nism:1660;nism;BRYO;1660;Leptodon smithii (Hedw.) F.Weber & D.Mohr;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1662;nism;BRYO;1662;Leptodontium styriacum (Jur.) Limpr.;1;2000;NA;NA;NA;250;CH;21;1;1
+infoflora:236500;infoflora;TRAC;236500;Leucanthemum halleri (Vitman) Ducommun;;2000;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:12175;swissfungi;FUNG;12175;Lichenochora constrictella;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25525;swissfungi;FUNG;25525;Lichenostigma cosmopolites;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25747;swissfungi;FUNG;25747;Lichenothelia rugosa;;1985;NA;NA;NA;250;CH;21;0.2;1
+infoflora:238900;infoflora;TRAC;238900;Linaria alpina (L.) Mill. subsp. alpina;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:239000;infoflora;TRAC;239000;Linaria alpina subsp. petraea (Jord.) Rouy;3;2000;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:3563;swisslichens;LICH;3563;Lobaria linita;4;1989;NA;NA;NA;250;CH;21;0.2;1
+nism:278;nism;BRYO;278;Mannia androgyna (L.) A.Evans;2;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:33;nism;BRYO;33;Mannia gracilis (F.Weber) D.B.Schill & D.G.Long;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:286;nism;BRYO;286;Mannia triandra (Scop.) Grolle;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:289;nism;BRYO;289;Marchantia paleacea Bertol.;4;2000;NA;NA;NA;250;CH;21;1;1
+nism:161;nism;BRYO;161;Marsupella apiculata Schiffn.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:298;nism;BRYO;298;Marsupella boeckii (Austin) Kaal.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:313;nism;BRYO;313;Marsupella sparsifolia (Lindb.) Dumort.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:254700;infoflora;TRAC;254700;Matthiola valesiaca Boiss.;2;2000;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25905;swissfungi;FUNG;25905;Merismatium thamnoliicola;;1985;NA;NA;NA;250;CH;21;0.2;1
+nism:254;nism;BRYO;254;Mesoptychia gillmanii (Austin) L.Söderstr. & Vá?a;4;2000;NA;NA;NA;250;CH;21;1;1
+nism:1681;nism;BRYO;1681;Mielichhoferia elongata (Hook.) Hornsch.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1683;nism;BRYO;1683;Mielichhoferia mielichhoferiana (Funck) Loeske;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:260600;infoflora;TRAC;260600;Minuartia cherlerioides subsp. rionii (Gremli) Friedrich;2;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:261450;infoflora;TRAC;261450;Minuartia rostrata (Pers.) Rchb.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:261500;infoflora;TRAC;261500;Minuartia rubra (Scop.) McNeill;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:261600;infoflora;TRAC;261600;Minuartia rupestris (Scop.) Schinz & Thell.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:262500;infoflora;TRAC;262500;Moehringia ciliata (Scop.) Dalla Torre;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:262900;infoflora;TRAC;262900;Moehringia muscosa L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+vogelwarte:4180;vogelwarte;AVES;4180;Monticola saxatilis (Linnaeus, 1766);3;2000;NA;NA;NA;250;CH;21;0.2;1
+vogelwarte:4190;vogelwarte;AVES;4190;Monticola solitarius (Linnaeus, 1758);2;2000;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:22457;swissfungi;FUNG;22457;Muellerella ventosicola;;1985;NA;NA;NA;250;CH;21;0.2;1
+infoflora:265100;infoflora;TRAC;265100;Murbeckiella pinnatifida (Lam.) Rothm.;;2000;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:1422;swisslichens;LICH;1422;Mycobilimbia lobulata;;1989;NA;NA;NA;250;CH;21;0.2;1
+nism:327;nism;BRYO;327;Mylia taylorii (Hook.) Gray;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:329;nism;BRYO;329;Nardia breidleri (Limpr.) Lindb.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infofauna:18065;infofauna;COLEca;18065;Nebria cordicollis;;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:18638;infofauna;COLE;18638;Nebria cordicollis crypticola Ledoux & Roux, 25;2;2000;NA;NA;NA;250;CH;21;0.2;NPA
+infofauna:90016;infofauna;COLEca;90016;Nebria cordicollis escheri Heer, 1837;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:90014;infofauna;COLEca;90014;Nebria cordicollis gracilis K. Daniel & J. Daniel, 189;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:90013;infofauna;COLEca;90013;Nebria cordicollis tenuissima Bänninger, 1925;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:90015;infofauna;COLEca;90015;Nebria heeri K. Daniel, 193;3;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:1707;nism;BRYO;1707;Neckera menziesii Drumm.;2;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2058;nism;BRYO;2058;Nogopterium gracile (Hedw.) Crosby & W.R.Buck;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:272200;infoflora;TRAC;272200;Notholaena marantae (L.) Desv.;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:31251;infofauna;LEPI;31251;Oeneis glacialis;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:1727;nism;BRYO;1727;Oreas martiana (Hoppe & Hornsch.) Brid.;1;2000;NA;NA;NA;250;CH;21;1;1
+infofauna:18070;infofauna;COLEca;18070;Oreonebria angusticollis;;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:18642;infofauna;COLEca;18642;Oreonebria bluemlis alpicola Szallies & Huber, 214;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:27539;infofauna;LEPI;27539;Oreopsyche tenella;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:1728;nism;BRYO;1728;Oreoweisia torquescens (Brid.) Wijk & Margad.;1;2000;NA;NA;NA;250;CH;21;1;1
+nism:1733;nism;BRYO;1733;Orthothecium chryseon (Schwägr.) Schimp.;2;2000;NA;NA;NA;250;CH;21;1;1
+nism:1736;nism;BRYO;1736;Orthothecium strictum Lorentz;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1743;nism;BRYO;1743;Orthotrichum alpestre Bruch & Schimp.;2;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2666;nism;BRYO;2666;Orthotrichum laevigatum J.E.Zetterst.;4;2000;NA;NA;NA;250;CH;21;1;1
+nism:1788;nism;BRYO;1788;Orthotrichum urnigerum Myrin;2;1984;NA;NA;NA;250;CH;21;0.2;1
+infofauna:59588;infofauna;APID;59588;Osmia andrenoides;;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:59659;infofauna;APID;59659;Osmia steinmanni;;2000;NA;NA;NA;250;CH;21;1;1
+infoflora:288100;infoflora;TRAC;288100;Oxyria digyna (L.) Hill;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:288500;infoflora;TRAC;288500;Oxytropis fetida (Vill.) DC.;2;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:289200;infoflora;TRAC;289200;Oxytropis helvetica Scheele;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:290900;infoflora;TRAC;290900;Papaver aurantiacum Loisel.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:291600;infoflora;TRAC;291600;Papaver occidentale (Markgr.) H. E. Hess & Landolt;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:291900;infoflora;TRAC;291900;Papaver sendtneri Hayek;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:293800;infoflora;TRAC;293800;Pedicularis aspleniifolia Willd.;3;2000;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:1046;swisslichens;LICH;1046;Peltigera malacea;;1989;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:1051;swisslichens;LICH;1051;Peltigera rufescens;;1989;NA;NA;NA;250;CH;21;0.2;1
+nism:357;nism;BRYO;357;Peltolepis quadrata (Saut.) Müll.Frib.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:1786;swisslichens;LICH;1786;Pertusaria geminipara;;1989;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:1063;swisslichens;LICH;1063;Pertusaria glomerata;3;1989;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:1084;swisslichens;LICH;1084;Pertusaria oculata;4;1989;NA;NA;NA;250;CH;21;0.2;1
+infoflora:296000;infoflora;TRAC;296000;Petasites paradoxus (Retz.) Baumg.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:296100;infoflora;TRAC;296100;Petrocallis pyrenaica (L.) R. Br.;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:1821;nism;BRYO;1821;Philonotis rigida Brid.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:300500;infoflora;TRAC;300500;Phyllitis scolopendrium (L.) Newman;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:301300;infoflora;TRAC;301300;Phyteuma hedraianthifolium Rich. Schulz;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:301500;infoflora;TRAC;301500;Phyteuma humile Gaudin;2;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:302000;infoflora;TRAC;302000;Phyteuma scheuchzeri All.;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:1833;nism;BRYO;1833;Plagiobryum demissum (Hook.) Lindb.;1;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:359;nism;BRYO;359;Plagiochasma rupestre (J.R.Forst. & G.Forst.) Steph.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:362;nism;BRYO;362;Plagiochila exigua (Taylor) Taylor;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1874;nism;BRYO;1874;Plagiothecium piliferum (Sw.) Schimp.;4;2000;NA;NA;NA;250;CH;21;1;1
+infoflora:309600;infoflora;TRAC;309600;Poa cenisia All.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:310000;infoflora;TRAC;310000;Poa glauca Vahl;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:310200;infoflora;TRAC;310200;Poa laxa Haenke;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:310300;infoflora;TRAC;310300;Poa minor Gaudin;;2000;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:10366;swissfungi;FUNG;10366;Polycoccum sporastatiae;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:10367;swissfungi;FUNG;10367;Polycoccum trypethelioides;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25734;swissfungi;FUNG;25734;Polycoccum ventosicola;;1985;NA;NA;NA;250;CH;21;0.2;1
+infoflora:316000;infoflora;TRAC;316000;Polypodium cambricum L.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:316100;infoflora;TRAC;316100;Polypodium interjectum Shivas;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:316400;infoflora;TRAC;316400;Polypodium vulgare L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:321600;infoflora;TRAC;321600;Potentilla caulescens L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:325700;infoflora;TRAC;325700;Primula auricula L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:326605;infoflora;TRAC;326605;Primula hirsuta All.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:326900;infoflora;TRAC;326900;Primula latifolia Lapeyr.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:327700;infoflora;TRAC;327700;Pritzelago alpina (L.) Kuntze subsp. alpina;;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:27546;infofauna;LEPI;27546;Pseudobankesia alpestrella;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:27547;infofauna;LEPI;27547;Pseudobankesia contractella;4;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:670;nism;BRYO;670;Pseudocrossidium revolutum (Brid.) R.H.Zander;2;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2020;nism;BRYO;2020;Pseudoleskea artariae Thér.;1;2000;NA;NA;NA;250;CH;21;1;1
+nism:2562;nism;BRYO;2562;Pseudoleskeella rupestris (Berggr.) Hedenäs & L.Söderstr.;;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2053;nism;BRYO;2053;Pseudoleskeella tectorum (Brid.) Broth.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2061;nism;BRYO;2061;Pterygoneurum ovatum (Hedw.) Dixon;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2071;nism;BRYO;2071;Ptychomitrium polyphyllum (Sw.) Bruch & Schimp.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+vogelwarte:3630;vogelwarte;AVES;3630;Ptyonoprogne rupestris Scopoli, 1769;3;2000;NA;NA;NA;250;CH;21;0.2;1
+vogelwarte:3770;vogelwarte;AVES;3770;Pyrrhocorax pyrrhocorax (Linnaeus, 1758);2;2000;NA;NA;NA;250;CH;21;1;1
+nism:2086;nism;BRYO;2086;Racomitrium fasciculare (Hedw.) Brid.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2096;nism;BRYO;2096;Racomitrium microcarpon (Hedw.) Brid.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:6332;nism;BRYO;6332;Racomitrium nivale (Köckinger & al.) Köckinger;;2000;NA;NA;NA;250;CH;21;1;1
+nism:394;nism;BRYO;394;Radula complanata subsp. lindenbergiana (C.Hartm.) R.M.Schust.;;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:338700;infoflora;TRAC;338700;Ranunculus glacialis L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:339900;infoflora;TRAC;339900;Ranunculus parnassiifolius L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:341600;infoflora;TRAC;341600;Ranunculus seguieri Vill.;2;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:395;nism;BRYO;395;Reboulia hemisphaerica (L.) Raddi;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2097;nism;BRYO;2097;Rhabdoweisia crenulata (Mitt.) H.Jameson;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2098;nism;BRYO;2098;Rhabdoweisia crispata (Dicks.) Lindb.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:6173;swissfungi;FUNG;6173;Rhagadostoma lichenicola;;1985;NA;NA;NA;250;CH;21;0.2;1
+infoflora:343600;infoflora;TRAC;343600;Rhamnus pumila Turra;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:345200;infoflora;TRAC;345200;Rhodiola rosea L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:2128;nism;BRYO;2128;Rhynchostegium rotundifolium (Brid.) Schimp.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:413;nism;BRYO;413;Riccia ciliifera Link;4;1984;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:2932;swisslichens;LICH;2932;Rinodina mniaraea;4;1989;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25630;swissfungi;FUNG;25630;Rosellinula haplospora;;1985;NA;NA;NA;250;CH;21;0.2;1
+nism:2140;nism;BRYO;2140;Saelania glaucescens (Hedw.) Broth.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:366300;infoflora;TRAC;366300;Salix serpillifolia Scop.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:371200;infoflora;TRAC;371200;Saussurea alpina subsp. depressa (Gren.) Nyman;3;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:432;nism;BRYO;432;Sauteria alpina (Nees) Nees;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:376350;infoflora;TRAC;376350;Saxifraga ×kochii Hornung;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:371900;infoflora;TRAC;371900;Saxifraga aphylla Sternb.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:372000;infoflora;TRAC;372000;Saxifraga aspera L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:372240;infoflora;TRAC;372240;Saxifraga biflora All.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:372300;infoflora;TRAC;372300;Saxifraga bryoides L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:372600;infoflora;TRAC;372600;Saxifraga cernua L.;2;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:372700;infoflora;TRAC;372700;Saxifraga cotyledon L.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:373000;infoflora;TRAC;373000;Saxifraga diapensioides Bellardi;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:373100;infoflora;TRAC;373100;Saxifraga exarata Vill. subsp. exarata;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:374300;infoflora;TRAC;374300;Saxifraga muscoides All.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:374400;infoflora;TRAC;374400;Saxifraga mutata L.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:374500;infoflora;TRAC;374500;Saxifraga oppositifolia L. subsp. oppositifolia;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:374600;infoflora;TRAC;374600;Saxifraga paniculata Mill.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:375000;infoflora;TRAC;375000;Saxifraga retusa Gouan subsp. retusa;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:436;nism;BRYO;436;Scapania calcicola (Arnell & J.Perss.) Ingham;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:456;nism;BRYO;456;Scapania praetervisa Meyl.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:472;nism;BRYO;472;Scapania verrucosa Heeg;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2154;nism;BRYO;2154;Schistidium brunnescens Limpr.;;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:4080;nism;BRYO;4080;Schistidium brunnescens Limpr. subsp. brunnescens;;1984;NA;NA;1000;250;CH;21;0.2;1
+nism:4081;nism;BRYO;4081;Schistidium brunnescens subsp. griseum (Nees & Hornsch.) H.H.Blom;;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2741;nism;BRYO;2741;Schistidium confusum H.H.Blom;;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2569;nism;BRYO;2569;Schistidium flaccidum (De Not.) Ochyra;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2740;nism;BRYO;2740;Schistidium frigidum H.H.Blom;;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2748;nism;BRYO;2748;Schistidium grande Poelt;;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2733;nism;BRYO;2733;Schistidium helveticum (Schkuhr) Deguchi;;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2749;nism;BRYO;2749;Schistidium pruinosum (Schimp.) G.Roth;;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2737;nism;BRYO;2737;Schistidium pulchrum H.H.Blom;;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2696;nism;BRYO;2696;Schistidium sordidum I.Hagen;;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1470;nism;BRYO;1470;Schistidium teretinerve (Limpr.) Limpr.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2739;nism;BRYO;2739;Schistidium umbrosum (J.E.Zetterst.) H.H.Blom;;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:4111;nism;BRYO;4111;Schistidium venetum H.H.Blom;;2000;NA;NA;NA;250;CH;21;1;1
+nism:2171;nism;BRYO;2171;Schistostega pennata (Hedw.) F.Weber & D.Mohr;4;1984;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:14653;swissfungi;FUNG;14653;Sclerococcum sphaerale;;1985;NA;NA;NA;250;CH;21;0.2;1
+nism:2177;nism;BRYO;2177;Scopelophila ligulata (Spruce) Spruce;1;2000;NA;NA;NA;250;CH;21;1;1
+nism:2182;nism;BRYO;2182;Scorpiurium circinatum (Bruch) M.Fleisch. & Loeske;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:382000;infoflora;TRAC;382000;Scrophularia juratensis Schleich.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:383300;infoflora;TRAC;383300;Sedum alpestre Vill.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:383400;infoflora;TRAC;383400;Sedum anacampseros L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:2502;nism;BRYO;2502;Seligeria austriaca T.Schauer;2;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2185;nism;BRYO;2185;Seligeria brevifolia (Lindb.) Lindb.;2;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2186;nism;BRYO;2186;Seligeria calcarea (Hedw.) Bruch & Schimp.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2187;nism;BRYO;2187;Seligeria carniolica (Breidl. & Beck) Nyholm;1;2000;NA;NA;NA;250;CH;21;1;1
+nism:2512;nism;BRYO;2512;Seligeria oelandica C.E.O.Jensen & Medelius;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2571;nism;BRYO;2571;Seligeria patula (Lindb.) I.Hagen;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:388200;infoflora;TRAC;388200;Senecio doronicum (L.) L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:390400;infoflora;TRAC;390400;Senecio viscosus L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:396600;infoflora;TRAC;396600;Silene pusilla Waldst. & Kit.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:396900;infoflora;TRAC;396900;Silene saxifraga L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:397400;infoflora;TRAC;397400;Silene vulgaris subsp. glareosa (Jord.) Marsden-Jones & Turrill;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:397600;infoflora;TRAC;397600;Silene vulgaris subsp. prostrata (Gaudin) Schinz & Thell.;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:213;nism;BRYO;213;Solenostoma subellipticum (Heeg) R.M.Schust.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:1327;swisslichens;LICH;1327;Solorina bispora;;1989;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:4127;swisslichens;LICH;4127;Solorina octospora;;1989;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:1331;swisslichens;LICH;1331;Solorina spongiosa;2;1989;NA;NA;NA;250;CH;21;0.2;1
+infoflora:404800;infoflora;TRAC;404800;Spergularia segetalis (L.) G. Don;2;2000;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25646;swissfungi;FUNG;25646;Sphaerellothecium leratianum;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:25526;swissfungi;FUNG;25526;Sphaerellothecium thamnoliae;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:22546;swissfungi;FUNG;22546;Stigmidium fuscatae;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:22556;swissfungi;FUNG;22556;Stigmidium squamariae;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:22557;swissfungi;FUNG;22557;Stigmidium tabacinae;;1985;NA;NA;NA;250;CH;21;0.2;1
+swissfungi:22558;swissfungi;FUNG;22558;Stigmidium xanthoparmeliarum;;1985;NA;NA;NA;250;CH;21;0.2;1
+nism:649;nism;BRYO;649;Streblotrichum enderesii (Garov.) Loeske;4;2000;NA;NA;NA;250;CH;21;1;1
+infofauna:29384;infofauna;LEPI;29384;Synansphecia triannuliformis;;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:2372;nism;BRYO;2372;Syntrichia caninervis gypsophila (G.Roth) Ochyra;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2371;nism;BRYO;2371;Syntrichia caninervis Mitt.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2375;nism;BRYO;2375;Syntrichia fragilis (Taylor) Ochyra;1;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2416;nism;BRYO;2416;Syntrichia sinensis (Müll.Hal.) Ochyra;1;1984;NA;NA;NA;250;CH;21;0.2;1
+infofauna:8193;infofauna;MOLL;8193;Tandonia nigra (K. Pfeiffer, 1849);1;2000;NA;NA;NA;250;CH;21;1;1
+infoflora:412300;infoflora;TRAC;412300;Taraxacum ceratophorum aggr.;1;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:413200;infoflora;TRAC;413200;Taraxacum pacheri Sch. Bip.;3;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:2311;nism;BRYO;2311;Tetrodontium ovatum (Funck) Schwägr.;1;2000;NA;NA;NA;250;CH;21;1;1
+nism:2314;nism;BRYO;2314;Tetrodontium repandum (Funck) Schwägr.;4;2000;NA;NA;NA;250;CH;21;1;1
+swisslichens:2231;swisslichens;LICH;2231;Thamnolia vermicularis;2;1989;NA;NA;NA;250;CH;21;0.2;1
+infoflora:419100;infoflora;TRAC;419100;Thlaspi rotundifolium (L.) Gaudin subsp. rotundifolium;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:419200;infoflora;TRAC;419200;Thlaspi rotundifolium subsp. corymbosum Gremli;3;2000;NA;NA;NA;250;CH;21;0.2;1
+vogelwarte:3960;vogelwarte;AVES;3960;Tichodroma muraria (Linnaeus, 1766);3;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:4211;nism;BRYO;4211;Timmia norvegica J.E.Zetterst.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2349;nism;BRYO;2349;Timmiella anomala (Bruch & Schimp.) Limpr.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:4298;swisslichens;LICH;4298;Toninia coelestina (Anzi) Vezda;4;1989;NA;NA;NA;250;CH;21;0.2;NPA
+swisslichens:8224;swisslichens;LICH;8224;Toninia opuntioides;4;1989;NA;NA;NA;250;CH;21;0.2;1
+swisslichens:4280;swisslichens;LICH;4280;Toninia tristis;4;1989;NA;NA;NA;250;CH;21;0.2;1
+nism:4214;nism;BRYO;4214;Tortella alpicola Dixon;;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2358;nism;BRYO;2358;Tortella humilis (Hedw.) Jenn.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2361;nism;BRYO;2361;Tortella nitida (Lindb.) Broth.;4;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2501;nism;BRYO;2501;Tortula brevissima Schiffn.;1;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2370;nism;BRYO;2370;Tortula canescens Mont.;2;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1152;nism;BRYO;1152;Tortula cernua (Huebener) Lindb.;2;2000;NA;NA;NA;250;CH;21;1;1
+nism:2377;nism;BRYO;2377;Tortula inermis (Brid.) Mont.;3;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2395;nism;BRYO;2395;Tortula muralis subsp. obtusifolia (Schwägr.) Culm.;2;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:2402;nism;BRYO;2402;Tortula revolvens (Schimp.) G.Roth;1;1984;NA;NA;NA;250;CH;21;0.2;1
+nism:1157;nism;BRYO;1157;Tortula systylia (Schimp.) Lindb.;2;1984;NA;NA;NA;250;CH;21;0.2;1
+infofauna:18123;infofauna;COLEca;18123;Trechus laevipes;1;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:18136;infofauna;COLEca;18136;Trechus schyberosiae Szallies & Schüle, 211;3;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:18122;infofauna;COLEca;18122;Trechus tenuilimbatus K. Daniel & J. Daniel, 1898;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:429300;infoflora;TRAC;429300;Trisetum distichophyllum (Vill.) P. Beauv.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:429500;infoflora;TRAC;429500;Trisetum spicatum (L.) K. Richt.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infofauna:8244;infofauna;MOLL;8244;Trochulus caelatus (S. Studer, 182);1;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:2450;nism;BRYO;2450;Ulota hutchinsiae (Sm.) Hammar;4;1984;NA;NA;NA;250;CH;21;0.2;1
+infoflora:435700;infoflora;TRAC;435700;Valeriana montana L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:436500;infoflora;TRAC;436500;Valeriana saxatilis L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:436600;infoflora;TRAC;436600;Valeriana supina Ard.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:441800;infoflora;TRAC;441800;Veronica fruticulosa L.;;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:449700;infoflora;TRAC;449700;Viola cenisia L.;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:454500;infoflora;TRAC;454500;Woodsia alpina (Bolton) Gray;4;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:454700;infoflora;TRAC;454700;Woodsia ilvensis (L.) R. Br.;2;2000;NA;NA;NA;250;CH;21;0.2;1
+infoflora:454800;infoflora;TRAC;454800;Woodsia pulchella Bertol.;2;2000;NA;NA;NA;250;CH;21;0.2;1
+nism:2481;nism;BRYO;2481;Zygodon gracilis Wilson;1;2000;NA;NA;NA;250;CH;21;1;1
+swissfungi:110;swissfungi;FUNG;110;Agrocybe praecox;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:193;swissfungi;FUNG;193;Amanita solitaria;4;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:198;swissfungi;FUNG;198;Amanita strobiliformis;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:200;swissfungi;FUNG;200;Amanita vaginata;;1985;NA;NA;NA;250;CH;23;0.2;1
+nism:598;nism;BRYO;598;Archidium alternifolium (Hedw.) Mitt.;2;2000;NA;NA;NA;250;CH;23;1;1
+swissfungi:418;swissfungi;FUNG;418;Aurantiporus fissilis;4;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:445;swissfungi;FUNG;445;Baeospora myosura;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:545;swissfungi;FUNG;545;Boletus depilatus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:555;swissfungi;FUNG;555;Boletus impolitus;4;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:558;swissfungi;FUNG;558;Boletus luridus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:566;swissfungi;FUNG;566;Boletus radicans;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:569;swissfungi;FUNG;569;Boletus rhodopurpureus;4;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:570;swissfungi;FUNG;570;Boletus rhodoxanthus;4;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:607;swissfungi;FUNG;607;Bovista aestivalis;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:613;swissfungi;FUNG;613;Bovista plumbea;;1985;NA;NA;NA;250;CH;23;0.2;1
+nism:977;nism;BRYO;977;Bryum radiculosum Brid.;4;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:2503;nism;BRYO;2503;Bryum ruderale Crundw. & Nyholm;4;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:993;nism;BRYO;993;Bryum subapiculatum Hampe;;1984;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:656;swissfungi;FUNG;656;Calocybe gambosa;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:4505;swissfungi;FUNG;4505;Chlorophyllum rachodes;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:869;swissfungi;FUNG;869;Chroogomphus helveticus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:870;swissfungi;FUNG;870;Chroogomphus rutilus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:1088;swissfungi;FUNG;1088;Clitocybe rivulosa;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:1206;swissfungi;FUNG;1206;Conocybe apala;;1985;NA;NA;NA;250;CH;23;0.2;1
+nism:1129;nism;BRYO;1129;Cryphaea heteromalla (Hedw.) D.Mohr;4;1984;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:25155;swissfungi;FUNG;25155;Cuphophyllus pratensis;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:25156;swissfungi;FUNG;25156;Cuphophyllus virgineus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:2046;swissfungi;FUNG;2046;Cystoderma amianthinum;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:2079;swissfungi;FUNG;2079;Daedalea quercina;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:2080;swissfungi;FUNG;2080;Daedaleopsis confragosa;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:2122;swissfungi;FUNG;2122;Dendropolyporus umbellatus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:2123;swissfungi;FUNG;2123;Dendrothele acerina;;1985;NA;NA;NA;250;CH;23;0.2;1
+nism:2542;nism;BRYO;2542;Dicranella howei Renauld & Cardot;4;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:1319;nism;BRYO;1319;Ephemerum recurvifolium (Dicks.) Boulay;2;2000;NA;NA;NA;250;CH;23;1;1
+nism:1363;nism;BRYO;1363;Fabronia ciliaris (Brid.) Brid.;4;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:6524;nism;BRYO;6524;Fabronia major De Not.;;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:1365;nism;BRYO;1365;Fabronia pusilla Raddi;4;1984;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:2602;swissfungi;FUNG;2602;Fistulina hepatica;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:2628;swissfungi;FUNG;2628;Fomes fomentarius;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:23998;swissfungi;FUNG;23998;Ganoderma australe;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:2710;swissfungi;FUNG;2710;Ganoderma lipsiense;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:2712;swissfungi;FUNG;2712;Ganoderma pfeifferi;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:2713;swissfungi;FUNG;2713;Ganoderma resinaceum;4;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:2736;swissfungi;FUNG;2736;Geastrum pectinatum;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:12079;swissfungi;FUNG;12079;Geopora sumneriana;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:2845;swissfungi;FUNG;2845;Grifola frondosa;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:22225;swissfungi;FUNG;22225;Gymnopus acervatus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:2872;swissfungi;FUNG;2872;Gyroporus castaneus;4;1985;NA;NA;NA;250;CH;23;0.2;1
+nism:1487;nism;BRYO;1487;Habrodon perpusillus (De Not.) Lindb.;4;1984;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:2983;swissfungi;FUNG;2983;Helvella acetabulum;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:2987;swissfungi;FUNG;2987;Helvella crispa;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3051;swissfungi;FUNG;3051;Hericium erinaceus;3;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3184;swissfungi;FUNG;3184;Hygrocybe conica;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3194;swissfungi;FUNG;3194;Hygrocybe irrigata;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3212;swissfungi;FUNG;3212;Hygrocybe psittacina;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3542;swissfungi;FUNG;3542;Inocybe adaequata;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3624;swissfungi;FUNG;3624;Inocybe godeyi;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3733;swissfungi;FUNG;3733;Inocybe rimosa;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3781;swissfungi;FUNG;3781;Inonotus cuticularis;3;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3782;swissfungi;FUNG;3782;Inonotus dryadeus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3785;swissfungi;FUNG;3785;Inonotus hispidus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3788;swissfungi;FUNG;3788;Inonotus obliquus;4;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3789;swissfungi;FUNG;3789;Inonotus radiatus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3823;swissfungi;FUNG;3823;Laccaria laccata;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3983;swissfungi;FUNG;3983;Lactarius evosmus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3986;swissfungi;FUNG;3986;Lactarius flexuosus;4;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:4021;swissfungi;FUNG;4021;Lactarius pubescens;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:4023;swissfungi;FUNG;4023;Lactarius quietus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:4036;swissfungi;FUNG;4036;Lactarius semisanguifluus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:4063;swissfungi;FUNG;4063;Laetiporus sulphureus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:4265;swissfungi;FUNG;4265;Lepiota xanthophylla;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:4280;swissfungi;FUNG;4280;Lepista sordida;;1985;NA;NA;NA;250;CH;23;0.2;1
+nism:1660;nism;BRYO;1660;Leptodon smithii (Hedw.) F.Weber & D.Mohr;4;1984;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:4323;swissfungi;FUNG;4323;Leucoagaricus leucothites;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:4474;swissfungi;FUNG;4474;Lyophyllum paelochroum;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:4543;swissfungi;FUNG;4543;Marasmius oreades;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:4625;swissfungi;FUNG;4625;Melanophyllum haematospermum;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:4639;swissfungi;FUNG;4639;Meripilus giganteus;;1985;NA;NA;NA;250;CH;23;0.2;1
+nism:2006;nism;BRYO;2006;Microbryum davallianum (Sm.) R.H.Zander;3;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:2004;nism;BRYO;2004;Microbryum starckeanum (Hedw.) R.H.Zander;3;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:3791;nism;BRYO;3791;Orthotrichum acuminatum H.Philib.;;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:1743;nism;BRYO;1743;Orthotrichum alpestre Bruch & Schimp.;2;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:1746;nism;BRYO;1746;Orthotrichum callistomum Bruch & Schimp.;1;2000;NA;NA;NA;250;CH;23;1;1
+nism:6452;nism;BRYO;6452;Orthotrichum dentatum T.Kiebacher & Lüth;;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:3799;nism;BRYO;3799;Orthotrichum hispanicum F.Lara & al.;;2000;NA;NA;NA;250;CH;23;1;1
+nism:1759;nism;BRYO;1759;Orthotrichum microcarpum De Not.;2;2000;NA;NA;NA;250;CH;23;1;1
+nism:1767;nism;BRYO;1767;Orthotrichum pulchellum Brunt.;4;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:3805;nism;BRYO;3805;Orthotrichum pumilum anon.;;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:1773;nism;BRYO;1773;Orthotrichum rogeri Brid.;3;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:1777;nism;BRYO;1777;Orthotrichum scanicum Gronvall;1;2000;NA;NA;NA;250;CH;23;1;1
+nism:1781;nism;BRYO;1781;Orthotrichum stellatum Brid.;1;2000;NA;NA;NA;250;CH;23;1;1
+swissfungi:5180;swissfungi;FUNG;5180;Oxyporus populinus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:5202;swissfungi;FUNG;5202;Panaeolus foenisecii;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:1311;swissfungi;FUNG;1311;Parasola plicatilis;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:5241;swissfungi;FUNG;5241;Paxillus involutus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:5269;swissfungi;FUNG;5269;Perenniporia fraxinea;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:5496;swissfungi;FUNG;5496;Phellinus contiguus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:5499;swissfungi;FUNG;5499;Phellinus ferruginosus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:5502;swissfungi;FUNG;5502;Phellinus igniarius;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:5503;swissfungi;FUNG;5503;Phellinus laevigatus;4;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:5510;swissfungi;FUNG;5510;Phellinus punctatus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:5513;swissfungi;FUNG;5513;Phellinus robustus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:5515;swissfungi;FUNG;5515;Phellinus tremulae;4;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:5516;swissfungi;FUNG;5516;Phellinus tuberculosus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:5583;swissfungi;FUNG;5583;Pholiota squarrosa;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:5655;swissfungi;FUNG;5655;Piptoporus betulinus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:5779;swissfungi;FUNG;5779;Polyporus squamosus;;1985;NA;NA;NA;250;CH;23;0.2;1
+nism:1991;nism;BRYO;1991;Protobryum bryoides (Dicks.) J.Guerra & M.J.Cano;2;1984;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:5814;swissfungi;FUNG;5814;Psathyrella candolleana;;1985;NA;NA;NA;250;CH;23;0.2;1
+nism:659;nism;BRYO;659;Pseudocrossidium hornschuchianum (Schultz) R.H.Zander;;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:670;nism;BRYO;670;Pseudocrossidium revolutum (Brid.) R.H.Zander;2;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:2128;nism;BRYO;2128;Rhynchostegium rotundifolium (Brid.) Schimp.;3;1984;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:6210;swissfungi;FUNG;6210;Rickenella fibula;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:22254;swissfungi;FUNG;22254;Rugosomyces carneus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:6357;swissfungi;FUNG;6357;Russula parazurea;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:6360;swissfungi;FUNG;6360;Russula pectinatoides;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:6403;swissfungi;FUNG;6403;Russula vesca;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:6474;swissfungi;FUNG;6474;Scleroderma citrinum;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:6477;swissfungi;FUNG;6477;Scleroderma verrucosum;4;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:6638;swissfungi;FUNG;6638;Spongipellis spumeus;3;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:6706;swissfungi;FUNG;6706;Strobilurus esculentus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:6708;swissfungi;FUNG;6708;Strobilurus tenacellus;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:6736;swissfungi;FUNG;6736;Suillus grevillei;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:6746;swissfungi;FUNG;6746;Suillus viscidus;;1985;NA;NA;NA;250;CH;23;0.2;1
+nism:2398;nism;BRYO;2398;Syntrichia pagorum (Milde) J.J.Amann;4;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:2000;nism;BRYO;2000;Tortula lanceola R.H.Zander;4;1984;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:7002;swissfungi;FUNG;7002;Tricholoma scalpturatum;;1985;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:7018;swissfungi;FUNG;7018;Tricholoma terreum;;1985;NA;NA;NA;250;CH;23;0.2;1
+nism:2441;nism;BRYO;2441;Ulota coarctata (P.Beauv.) Hammar;2;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:2453;nism;BRYO;2453;Ulota macrospora E.Bauer & Warnst.;1;2000;NA;NA;NA;250;CH;23;1;1
+swissfungi:7241;swissfungi;FUNG;7241;Ustulina deusta;;1985;NA;NA;NA;250;CH;23;0.2;1
+nism:2466;nism;BRYO;2466;Weissia longifolia Mitt.;;1984;NA;NA;NA;250;CH;23;0.2;1
+swissfungi:3425;swissfungi;FUNG;3425;Xylodon sambuci;;1985;NA;NA;NA;250;CH;23;0.2;1
+nism:2479;nism;BRYO;2479;Zygodon conoideus (Dicks.) Hook. & Taylor;4;1984;NA;NA;NA;250;CH;23;0.2;1
+nism:2485;nism;BRYO;2485;Zygodon rupestris Lorentz;4;1984;NA;NA;NA;250;CH;23;0.2;1
