@@ -1,7 +1,7 @@
 options("scipen"=100, "digits"=4)
 # install.packages("pacman")
 pacman::p_load(sf, data.table,tidyverse,ggplot2,reshape2,qgraph,vegan,raster,hablar)
-source("code/functions_ER.R")
+source("code/functions_OI.R")
 # LOCATION <- "G://R/"# location of all folders (PC Infoflora)
 LOCATION <- "C://Dossier_Ervan/R/"# location of all folders (IF office)
 
@@ -138,7 +138,7 @@ for (GUILD in G) {
   options("scipen"=100, "digits"=4)
   # install.packages("pacman")
   pacman::p_load(sf, data.table,tidyverse,ggplot2,reshape2,qgraph,vegan,raster,hablar)
-  source("code/functions_ER.R")
+  source("code/functions_OI.R")
   # LOCATION <- "G://R/"# location of all folders (PC Infoflora)
   LOCATION <- "C://Dossier_Ervan/R/"# location of all folders (IF office)
   
@@ -317,106 +317,119 @@ for (GUILD in G) {
     m3
     mapview::mapshot(m3, url =paste0("D:/SIG/SIG_BAFU/leaflets/",GUILD,"_plausi.html"))
   }
-  # ##########################################################
-  # # Create final leaflets
-  # rm(list=setdiff(ls(),"GUILD"))
-  # .rs.restartR()
-  # 
-  # library(leafgl)
-  # library(leaflet)
-  # library(leafem)
-  # library(leafpop)
-  # library(data.table)
-  # library(raster)
-  # library(tidyverse)
-  # library(sf)
-  # source("C://Dossier_Ervan/R/functions_ER.R")
-  # guild <- readxl::read_xlsx("C://Dossier_Ervan/Guildes&co/Guildes_revues_ER.xlsx",sheet=1,col_names = TRUE)
-  # guild.name <- guild[which(guild$No==GUILD),]$name_guild_de
-  # bench <- guild[which(guild$No==GUILD),]$bench
-  # 
-  # res <- LOAD("ha2add","data")
-  # st_geometry(res) <- "geometry"
-  # 
-  # res2 <- st_transform(res,2056)  ## goes back to Swiss CH1903+ / LV95
-  # res2 <- col.bin(res2,bench,min.size=5)
-  # st_write(res2[[1]][,c("BV.id","CLUST","sp.in.BV","sp.in.bench","observed_qual","potential_qual","Erganzungsbedarf")], paste0("shp/",GUILD,"_EB_2056.shp"),delete_layer = T)
-  # 
-  # res2 <- st_transform(res,4326)
-  # V1 <- col.bin(res2,bench,min.size=5)
-  # 
-  # summary(V1[[1]]$potential_qual-V1[[1]]$Erganzungsbedarf)
-  # 
-  # m = leaflet() %>%
-  #   addProviderTiles(provider = providers$CartoDB.Positron,group="Positron",layerId="Positron") %>%
-  #   addProviderTiles(provider = providers$Esri.WorldImagery,group="Esri",layerId="Esri") %>%
-  #   addPolygons(data = V1[[1]], group = "EB",weight=1,color="grey",opacity=0.8,fillColor = ~col,fillOpacity = 0.8,highlightOptions = highlightOptions(color = "black", weight = 2),popup = popupTable(V1[[1]][,c("BV.id","sp.in.BV","sp.in.bench","observed_qual","potential_qual","Erganzungsbedarf")],feature.id = FALSE,row.numbers = FALSE)) %>%
-  #   addLegend(colors=V1[[2]]$col,labels=V1[[2]]$lab,group = "EB", position = "topright",opacity=0.8,title=paste0("Erg?nzungsbedarf [ha] (max:",max(V1[[1]]$Erganzungsbedarf,na.rm=T),")"))
-  # 
-  # 
-  # m$dependencies = c(m$dependencies,
-  #                    mapview:::popupLayoutDependencies())
-  # 
-  # ## ADD IST
-  # PRED <- LOAD("qual4leaf","data")
-  # st_geometry(PRED) <- "geometry"
+  
+########################
+## CREATION LEAFLET FINAUX
+########################
+library(leafgl)
+library(leaflet)
+library(leafem)
+library(leafpop)
+library(data.table)
+library(raster)
+library(tidyverse)
+library(sf)
+source("code/functions_OI.R")
+guild <- readxl::read_xlsx("data/Guildes_revues_ER.xlsx",sheet=1,col_names = TRUE)
+DATE <- format(Sys.time(), '%d-%m-%y')
+
+G <- c(5:8,14:16,101,102)
+
+for (GUILD in G) {
+  dir <- paste0("C:/Dossier_Ervan/R/",list.files("C:/Dossier_Ervan/R")[grep(paste0("G",GUILD,"-"),list.files("C:/Dossier_Ervan/R"))])
+  setwd(dir)
+  bench <- guild[which(guild$ID==GUILD),]$bench
+  guild.name <- guild[which(guild$ID==GUILD),]$name_guild_de
+  
+  res <- LOAD("ha2add","data")
+  st_geometry(res) <- "geometry"
+  res2 <- st_transform(res,4326)
+  V1 <- col.bin(res2,bench,min.size=5,silence=F)
+  res <- V1[[1]]
+  st_geometry(res) <- "geometry"
+  
+  # ## Create factsheet
+  # TT <- readxl::read_xlsx("C://Dossier_Ervan/Guildes&co/var_enviro_selected.xlsx")
+  # VAR <- TT$label[!is.na(TT[,stringr::str_which(names(TT),paste0("G",GUILD,"$"))])]
+  # rmarkdown::render(input = "code/factsheet.Rmd",
+  #                   output_format = "html_document",
+  #                   output_file = paste0(GUILD,"_factsheet3.html"),
+  #                   output_dir = "D:/SIG/SIG_BAFU/factsheets_final/")
+  
+  st_geometry(res) <- "geometry"
+  m = leaflet() %>%
+    addProviderTiles(provider = providers$CartoDB.Positron,group="Positron",layerId="Positron") %>%
+    addProviderTiles(provider = providers$Esri.WorldImagery,group="Esri",layerId="Esri") %>%
+    addPolygons(data = res, group = "Erganzungsbedarf",weight=1,color="grey",opacity=0.8,fillColor = ~col,fillOpacity = 0.8,highlightOptions = highlightOptions(color = "black", weight = 2),popup = popupTable(V1[[1]][,c("BV.id","sp.in.BV","sp.in.bench","observed_qual","potential_qual","Erganzungsbedarf")],feature.id = FALSE,row.numbers = FALSE)) %>%
+    addLegend(colors=V1[[2]]$col,labels=V1[[2]]$lab,group = "Erganzungsbedarf", position = "topright",opacity=0.8,title=paste0("Erganzungsbedarf [ha] (max:",max(V1[[1]]$Erganzungsbedarf,na.rm=T),")")) %>%
+    addPolygons(data = res, group = "BV",weight=1,color="grey",opacity=0.8,fillColor = "transparent",fillOpacity = 0,highlightOptions = highlightOptions(color = "black", weight = 2),popup = popupTable(V1[[1]][,c("BV.id","sp.in.BV","sp.in.bench","observed_qual","potential_qual","Erganzungsbedarf")]))
+  
+  
+  m$dependencies = c(m$dependencies,
+                     mapview:::popupLayoutDependencies())
+  
+  ## ADD IST
+  PRED <- LOAD("qual4leaf","data")
+  setDT(PRED)[,"i2":= ifelse(ist <= median(ist,na.rm=T),"Hohe Qualitat","Sehr hohe Qualitat"),by=.SD]  ## binarize BIOINDEX as per BAFU-VDC layout
+  st_geometry(PRED) <- "geometry"
+    IST <- st_transform(PRED[!is.na(PRED$ist),],4326)
+  col1 = colourvalues::colour_values_rgb(IST$i2,palette="greens",include_alpha = FALSE)
+  col11 <- colorFactor(palette = "Greens",IST$i2)
+  
+  m1 <- m %>%
+    addGlPolygons(data = IST, group = "Observed quality (ha)",fillColor=col1,fillOpacity=0.8) %>%
+    addLegend(pal =  col11, values=IST$i2,group = "Observed quality (ha)", position = "topright",opacity=2,title="Observed quality (ha)")
+  
+  # Previous version with raster
   # IST <- st_transform(PRED[!is.na(PRED$ist),],3857)
   # grid2 <- raster::raster("D://SIG/data/grid100/grid100_3857.tif")
-  # I_ra <- fasterize::fasterize(IST,grid2,field="ist")
+  # I_ra <- fasterize::fasterize(IST,grid2,field="i2")
+  # raster::writeRaster(I_ra,paste0("shp/",GUILD,"_IST_",DATE,".tif"),format = 'GTiff', options=c("COMPRESS=DEFLATE", "PREDICTOR=2"),overwrite=TRUE)
   # col1 <- colorNumeric(palette = "viridis",IST$ist,na.color="#00000000")
-  # raster::writeRaster(I_ra,paste0("shp/",GUILD,"_IST.tif"),format = 'GTiff', options=c("COMPRESS=DEFLATE", "PREDICTOR=2"),overwrite=TRUE)
-  # 
-  # m1 <- m %>% 
-  #   addRasterImage(I_ra,colors=col1,method="ngb",group = "Observed qual") %>% 
-  #   addLegend(pal =  col1, values=IST$ist,group = "Observed qual", position = "topright",opacity=0.8,title="Observed quality")
-  # 
-  # 
-  # ## ADD SOLL
-  # P <- setDT(PRED)[quality=="pred",]
-  # # ## Priorisation du SOLL (cf code Priorisation)
-  # PRIO <- LOAD("prio","data")
-  # P <- merge(setDT(P),setDT(PRIO)[,c("CNHA","consensus")],by="CNHA",all.x=T)
-  # st_geometry(P) <- "geometry"
-  # P <- st_transform(P,3857)
-  # grid2 <- raster::raster("D://SIG/data/grid100/grid100_3857.tif")
-  # P_ra <- fasterize::fasterize(P,grid2,field="Qp")  ## replace by "consensus" when priorisation is done
-  # raster::writeRaster(P_ra,paste0("shp/",GUILD,"_SOLL2.tif"),format = 'GTiff', options=c("COMPRESS=DEFLATE", "PREDICTOR=2"),overwrite=TRUE)
-  # 
-  # # col3 = colourvalues::colour_values_rgb(P$prio, palette = "inferno",include_alpha = FALSE)
-  # col3 <- colorNumeric(palette = "inferno",P$Qp,na.color="#00000000",reverse=T)
-  # 
-  # m2 <- m1 %>% 
-  #   addRasterImage(P_ra,colors=col3,method="ngb",group = "Potential qual",maxBytes=4454211) %>% 
-  #   addLegend(pal =  col3,values=P$Qp,group = "Potential qual", position = "topright",opacity=0.8,title="Potential quality")
-  # 
-  # ### Add polygon INFOFAUNA
-  # dir <- "C://Dossier_Ervan/R/INFOFAUNA"
-  # FF <- list.files(dir)[grep(paste0("_",GUILD,"_cHull"),list.files(dir))]
-  # pol <-st_read(paste(dir, FF,sep="/"))
-  # pol <- st_transform(pol,4326)
-  # pol$PRIO <- ifelse(pol$proxy_IFed==0,"Regional","National")
-  # col4 = colourvalues::colour_values_rgb(pol$PRIO,palette="rdbu",include_alpha = FALSE)
-  # col5 <- colorFactor(palette = "RdBu",pol$PRIO)
-  # 
-  # m3 <- m2  %>%
-  #   addGlPolygons(data = pol, group = "IST prio",popup="PRIO",fillColor=col4,fillOpacity=0.8) %>%
-  #   addLegend(pal =  col5, values=pol$PRIO,group = "IST prio", position = "topright",opacity=2,title="IST priority")
-  # 
-  # ### Finalize leaflet
-  # m3 <- m2 %>% 
-  #   addLayersControl(baseGroups= c("Positron","Esri"),overlayGroups = c("EB","Observed qual","Potential qual","IST prio"),position="topleft") %>% 
-  #   hideGroup(c("Observed qual","Potential qual","IST prio"))
-  # m3
-  # mapview::mapshot(m3, url =paste0("report/",GUILD,"_final3.html"))
-  # 
-  # 
-  # 
-  # ### Write raster for BAFU
-  # ##########################
-  # res <- LOAD("ha2add","data")
-  # res <- col.bin(res,bench,min.size=5)
-  # res2 <- res[[1]]
-  # st_geometry(res2) <- "geometry"
-  # res2 <- st_transform(res2,2056)  ## goes back to Swiss CH1903+ / LV95
-  # st_write(res2[,c("BV.id","CLUST","sp.in.BV","sp.in.bench","observed_qual","potential_qual","Erganzungsbedarf")], paste0("shp/",GUILD,"_EB.shp"),delete_layer = T)
-  # 
+  # m1 <- m %>%
+  #   addRasterImage(I_ra,colors=col1,method="ngb",group = "Observed qual") %>%
+  #   addLegend(pal =  col1,values=IST$ist,group = "Observed qual", position = "topright",opacity=0.8,title="Observed quality")
+
+  
+  ## ADD SOLL
+  P <- setDT(PRED)[quality=="pred",]
+  # ## Priorisation du SOLL (cf code Priorisation)
+  PRIO <- LOAD("prio","data")
+  P <- merge(setDT(P),setDT(PRIO)[,c("CNHA","consensus")],by="CNHA",all.x=T)
+  st_geometry(P) <- "geometry"
+  P1 <- st_transform(P,3857)
+  grid2 <- raster::raster("D://SIG/data/grid100/grid100_3857.tif")
+  P_ra <- fasterize::fasterize(P1,grid2,field="consensus")
+  raster::writeRaster(P_ra,paste0("shp/",GUILD,"_PRED3857.tif"),format = 'GTiff', options=c("COMPRESS=DEFLATE", "PREDICTOR=2"),overwrite=TRUE)
+  
+  # col3 = colourvalues::colour_values_rgb(P$prio, palette = "inferno",include_alpha = FALSE)
+  col3 <- colorNumeric(palette = "inferno",P$consensus,na.color="#00000000",reverse=T)
+  
+  m2 <- m1 %>%
+    addRasterImage(P_ra,colors=col3,method="ngb",group = "Potential quality (consensus)",maxBytes=object.size(P_ra)) %>%
+    addLegend(pal =  col3,values=P$consensus,group = "Potential quality (consensus)", position = "topright",opacity=0.8,title="Potential quality (consensus)")
+  
+  
+  ### Add polygon INFOFAUNA
+  dir <- "C://Dossier_Ervan/R/INFOFAUNA"
+  FF <- list.files(dir)[grep(paste0("_",GUILD,"_cHull"),list.files(dir))]
+  pol <-st_read(paste(dir, FF,sep="/"))
+  pol <- st_transform(pol,4326)
+  pol$PRIO <- ifelse(pol$proxy_IFed==0,"Regional","National")
+  col4 = colourvalues::colour_values_rgb(pol$PRIO,palette="rdbu",include_alpha = FALSE)
+  col5 <- colorFactor(palette = "RdBu",pol$PRIO)
+  
+  m3 <- m2  %>%
+    addGlPolygons(data = pol, group = "Observed quality (polygons)",popup="PRIO",fillColor=col4,fillOpacity=0.8) %>%
+    addLegend(pal =  col5, values=pol$PRIO,group = "Observed quality (polygons)", position = "topright",opacity=2,title="Observed quality (polygons)")
+  
+  ### Finalize leaflet
+  m3 <- m3 %>%
+    addLayersControl(baseGroups= c("Positron","Esri"),overlayGroups = c("Erganzungsbedarf","Observed quality (ha)","Observed quality (polygons)","Potential quality (consensus)","BV"),position="topleft") %>%
+    hideGroup(c("Observed quality (ha)","Potential quality (consensus)","Observed quality (polygons)"))
+  # mapview::mapshot(m3, url =paste0("report/",GUILD,"_final.html"))
+  mapview::mapshot(m3, url =paste0("D:/SIG/SIG_BAFU/leaflets/",GUILD,"_final.html"))
+  cat(paste0("GUILD ",GUILD," done!","\n"))
+  
+}
+

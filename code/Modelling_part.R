@@ -6,7 +6,7 @@
 DATE <- format(Sys.time(), '%d-%m-%y')
 Time1 <- Sys.time()
 pacman::p_load(parallel, doParallel , ranger , xgboost , caret , data.table, mgcv , dismo , rJava  , Hmisc , dplyr , maxnet, lightgbm, methods)  
-source("code/functions_ER.R")
+source("code/functions_OI.R")
 
 
 if (!dir.exists(paste0(dir,"/model"))) {
