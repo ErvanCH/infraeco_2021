@@ -5,13 +5,9 @@ source("code/functions_OI.R")
 # LOCATION <- "G://R/"# location of all folders (PC Infoflora)
 LOCATION <- "C://Dossier_Ervan/R/"# location of all folders (IF office)
 
-GUILD <- 20
+GUILD <- 22
 
-### Select guild
-G <- c(2:4,10:13,17,19,20,22,23)  # nouveaux ID
-
-
-for (GUILD in G) {
+# for (GUILD in G) {
   dir <- paste0(LOCATION,list.files(LOCATION)[grep(paste0("G",GUILD,"-"),list.files(LOCATION))])
   guild <- readxl::read_xlsx("data/Guildes_revues_ER.xlsx",sheet=1,col_names = T,col_types = "guess")
   guild.info <- guild[which(guild$ID==GUILD),]
@@ -48,6 +44,7 @@ for (GUILD in G) {
 
   ## B. Pseudo-absence dans tout l'espace guilde
   eg <- LOAD("EG","data",dir)
+  names(eg) <- c("grid.id","geometry")
   EG <-setDT(grid_sf)[grid.id%in%c(IST$grid.id,eg$grid.id),c("grid.id","CNHA","BV04","canton","subreg","geometry","centro",..VAR)]
   EG <- EG[!duplicated(EG$grid.id),]
   NArep(EG)
@@ -126,9 +123,9 @@ for (GUILD in G) {
   # FF <- list.files(paste(dir,"data",sep="/"))[grep("enviro4model",as.vector(list.files(paste(dir,"data",sep="/"))))]
   # IF <- file.info(paste(dir,"data", FF,sep="/"))
   # load(paste(dir,"data", FF[which.max(IF$mtime)],sep="/"))
-  guild <- readxl::read_xlsx("data/Guildes_revues_ER.xlsx",sheet=1,col_names = T,col_types = "guess")
-  guild.info <- guild[which(guild$ID==GUILD),]
-  guild.info <- guild.info %>% hablar::convert(lgl(RF,GAM,GBM,GBM_xg,ME))
+  # guild <- readxl::read_xlsx("data/Guildes_revues_ER.xlsx",sheet=1,col_names = T,col_types = "guess")
+  # guild.info <- guild[which(guild$ID==GUILD),]
+  # guild.info <- guild.info %>% hablar::convert(lgl(RF,GAM,GBM,GBM_xg,ME))
   rstudioapi::restartSession(command='source("code/Modelling_part.R")')
   
   
@@ -168,7 +165,6 @@ for (GUILD in G) {
   OBS <- FILTER.OBS(GUILD)
   
   ##### BENCHMARKING
-  guild <- readxl::read_xlsx("C://Dossier_Ervan/Guildes&co/Guildes_revues_ER.xlsx",sheet=1,col_names = TRUE)
   guild.name <- guild[which(guild$ID==GUILD),]$name_guild_de
   th.pred <-  guild[which(guild$ID==GUILD),]$th.pred
   th.bench <- guild[which(guild$ID==GUILD),]$th.bench

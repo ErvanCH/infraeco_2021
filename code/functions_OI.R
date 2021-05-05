@@ -1576,4 +1576,21 @@ col.bin <- function(res2,bench,min.size=5,silence=NULL) {
   return(list(res3,COLtab))
 }
 
-## TEST
+### Function used in priorization: compute nbr of species in common among guilds within a hectare
+val.poly <- function(X) {
+  require(data.table)
+  IDX <- names(X)[3:ncol(X)]
+  RS <- apply(X[,..IDX],1, sum)
+  RES <- data.table("G"=IDX,"Nsp"=colSums(X[,..IDX]))
+  suppressWarnings(MM <- melt(X[,..IDX][RS==1],variable.name="G"))
+  if(nrow(MM)<1){
+    RES <- merge(RES[Nsp!=0],MM[value==1,.N,by=G],by="G",all.x=T)
+    RES$w <- 0
+  } else {
+    RES <- merge(RES[Nsp!=0],MM[value==1,.N,by=G],by="G",all.x=T)
+    RES <- within(RES,N[is.na(N)] <- 0)
+    RES[,"w":=N/Nsp]
+  }
+  RES[which.max(Nsp)]$w <- 1  # force the ref guild to have 1
+  return(sum(RES$w))
+}
