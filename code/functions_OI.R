@@ -38,21 +38,21 @@ IST.dsg<-function(IST,min.dist=300,IDX=NULL){
 }
 
 ### Load data
-LOAD <- function(file,in.folder=NULL,dir=NULL){   #load most recent RData file, and returns it by setting its name
+LOAD <- function(file,in.folder=NULL,dir=NULL,silent=NULL){   #load most recent RData file, and returns it by setting its name
   if (length(dir)==0) {  dir = getwd()  }
   if (length(in.folder)>0) {
     FF <- list.files(paste(dir,in.folder,sep="/"))[grep(file,as.vector(list.files(paste(dir,in.folder,sep="/"))))]
     IF <- file.info(paste(dir,in.folder, FF,sep="/"))
     fileName <- paste(dir,in.folder, FF[which.max(IF$mtime)],sep="/")
-    cat(paste0(file, " created: ",format(IF$mtime[which.max(IF$mtime)],"%d.%m.%y")),"\n")
+    if (is.null(silent)) {cat(paste0(file, " created: ",format(IF$mtime[which.max(IF$mtime)],"%d.%m.%y")),"\n")}
   } else {
     fileName = file
+    cat(paste0(file, " created: ",format(IF$mtime[which.max(IF$mtime)],"%d.%m.%y")),"\n")
   }
   load(fileName)
   get(setdiff(ls(),c("IF","FF","dir","fileName","in.folder","file")))
-  }
-  
-  
+}
+
 
 LABEL.VAR <- function(X) {
   lab <- read.csv2("D://SIG/data/raster_enviro/label_var_enviro.csv")
@@ -1241,6 +1241,7 @@ pick.bench<-function(Qpred,haQprop,haSp){
 
 BENCH<-function(PRED,OBS,th.pred,th.bench, th.qprop=1, defrag,sd.min=TRUE) {
   th.qpred<-quantile(setDT(PRED)[PRED$cal==1,]$Wmean,1-th.pred)
+  PRED <- within(PRED, Wmean[au!=0 | flachm!=0 | hochm!=0 | TWW!=0 | vogel!=0] <- 0) # set prediction to O in Nat.Inv.
   PRED[,Qp:=0]
   PRED$Qp[which(PRED$Wmean >=th.qpred & is.na(PRED$ist))]<-1
   # ch.realisation<-setDT(PRED)[,.("Qobs"=length(which(Qobs==1)),"Qpred"=length(which(Qpred==1 | Qobs==1)),"EG"=length(Qobs),"BV_area"=round(unique(area))),by="BV04"]
@@ -1542,7 +1543,7 @@ lv<-function(x,my.data,my.data.xy){
 }
 
 
-col.bin <- function(res2,bench,min.size=5,silence=NULL) {
+col.bin <- function(res2,bench,min.size=5,silent=NULL) {
   res2 <- res2[,c("BV04","ha2add_defrag", "CLUST", "subreg", "Nsp_BV", "Nsp_CLUST", "Nsp_BIOREG", 
                 "prop_SpClust", "prop_SpBioReg", "bench_Sp_bioreg", "bench_Nsp", 
                 "ha_to_add_sp", "Qobs", "Qpred", "EG", "BV_area", "Qprop", "bench", 
@@ -1560,7 +1561,7 @@ col.bin <- function(res2,bench,min.size=5,silence=NULL) {
     LAB <- c("1-10","10-50","50-100",">100") 
   }
   res2$bin <- cut(TARGET,breaks=BIN,include.lowest=TRUE,labels=LAB)
-  if(silence==FALSE) {  print(table(res2$bin)) }
+  if(is.null(silent)) {  print(table(res2$bin)) }
   res2$bin <- factor(res2$bin,levels=LAB)
   res2$bin[res2$potential_qual<min.size] <- NA  # tag BV with low potential
   COLtab <- data.frame(bin=LAB,col=COLbin,lab=LAB)

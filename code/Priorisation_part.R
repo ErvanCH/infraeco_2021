@@ -8,17 +8,17 @@ pacman::p_load(sf,tidyverse,data.table,raster)
 ## Choose guilds
 # GUILDS <- paste0("G",c(5:8,101))  # trame humide prio
 # GUILDS <- paste0("G",c(14:16,102)) # trame seche prio
-# GUILDS <- paste0("G",c(3,4,101)) # guildes non-prio humides
-# GUILDS <- paste0("G",c(10,12,13,22,102)) # guildes non-prio sèches
+# GUILDS <- paste0("G",c(2,3,4,101)) # guildes non-prio humides
+GUILDS <- paste0("G",c(10,12,13,22,102)) # guildes non-prio sèches
 # GUILDS <- paste0("G",c(17,19,101,102)) # trame forêts
-GUILDS <- paste0("G",c(20,101,102)) # trame prairies seches altitude
+# GUILDS <- paste0("G",c(20,101,102)) # trame prairies seches altitude
 
 
 ## Creat matrix of overlap among guilds
 LOCATION <- "C://Dossier_Ervan/R/"
 
 # Receiving data sets
-load("C:/Dossier_Ervan/R/Grid100/grid100_sf.Rdata")
+grid_sf <- LOAD("grid100","data")
 PRE <-GRID <- setDT(grid_sf)[,c("grid.id","CNHA","BV04")]
 
 for (i in 1:length(GUILDS)) {
@@ -27,10 +27,10 @@ for (i in 1:length(GUILDS)) {
   pred <- LOAD("qual4leaf","data",dir)
   
   # Add predictions of each guilds to receiving table (PRE)
-  PRE <- merge(PRE,pred[Qp==1,c("grid.id","Qp")],by="grid.id",all.x=T)  # overlap pred
+  PRE <- merge(PRE,pred[Qp==1,c("grid.id","Qp")],by="grid.id",all.x=TRUE)  # overlap pred
   names(PRE)[grep("Qp",names(PRE))] <- GUILDS[i]
   
-  GRID <- merge(GRID,pred[!is.na(ist),c("grid.id","ist")],by="grid.id",all.x=T)  # overlap obs
+  GRID <- merge(GRID,pred[!is.na(ist),c("grid.id","ist")],by="grid.id",all.x=TRUE)  # overlap obs
   names(GRID)[i+3] <- paste0("ist",substr(GUILDS[i],2,4))
 }
 
@@ -38,7 +38,7 @@ for (i in 1:length(GUILDS)) {
 head(PRE)
 head(GRID)
 
-GLD2=1
+
 ### Debut de la boucle par guilde
 for (GLD2 in 1:length(GUILDS)) {
   
@@ -56,24 +56,24 @@ for (GLD2 in 1:length(GUILDS)) {
   
   ## Import data quality and filter to avoid ha in federal inventories
   PRED <- LOAD("qual4leaf","data",dir)
-  grid_sf <- LOAD("grid100","data")
-  P <- merge(PRED,grid_sf[,c("grid.id","au","flachm","hochm","TWW","vogel")],by="grid.id",all.x=TRUE)
-  P <- setDT(P)[quality=="pred" & au==0 & flachm==0 & hochm==0 & TWW==0 & vogel==0]
+  # P <- merge(PRED,grid_sf[,c("grid.id","au","flachm","hochm","TWW","vogel")],by="grid.id",all.x=TRUE)
+  P <- setDT(PRED)[quality=="pred" & au==0 & flachm==0 & hochm==0 & TWW==0 & vogel==0]
 
   ## Exclude TRAMES
   if (gsub("G","",GUILDS[GLD2])%in%c(101,102)) {
     P$val = NA
   } else {
   
-  # Check dataset already exists
-  if (any(grepl("prio_overlap",list.files(path2data)))) {
-     PP <- LOAD("prio_overlap","data",dir)
-     P <- merge(P,PP,by="CNHA",all.x=T)
-    } else  {
+  # # Check dataset already exists
+  # if (any(grepl("prio_overlap",list.files(path2data)))) {
+  #    PP <- LOAD("prio_overlap","data",dir)
+  #    if (nrow(PP)!=nrow(P)) { stop("Former overlap doesn't match with PRED")
+  #    P <- merge(P,PP,by="CNHA",all.x=TRUE)
+  #   } else  {
   
   # 1) list all possible overalps in pred
   cols <- grep("ist",names(GRID))
-  PRE[,"sum" := rowSums(.SD, na.rm=T),.SDcols=cols]
+  PRE[,"sum" := rowSums(.SD, na.rm=TRUE),.SDcols=cols]
   PP <- PRE[sum>0]
   summary(PRE$sum)
   PP[is.na(PP)] <- 0
@@ -83,7 +83,7 @@ for (GLD2 in 1:length(GUILDS)) {
   
   # 2) overlap in quality observed (IST) by overlap
   GRID[,c(cols):=lapply(.SD,function(x) {ifelse(is.na(x),NA,1)}),.SDcols=cols]
-  GRID[,"sum" := rowSums(.SD, na.rm=T),.SDcols=cols]
+  GRID[,"sum" := rowSums(.SD, na.rm=TRUE),.SDcols=cols]
   G <- GRID[sum>0]
   G[is.na(G)] <- 0
   G[,"combi":=do.call(paste,c(.SD, sep = "-")),.SDcols=cols]
@@ -119,7 +119,7 @@ for (GLD2 in 1:length(GUILDS)) {
     TAB <- dcast(OBS,BV04+name~guild,value.var="guild",fun=function(x) length(unique(x)),margins="guild")
     head(TAB)
     
-    BB <- split(TAB,by="BV04")
+    BB <- split(TAB,TAB$BV04)
     
     library(parallel)
     ncores<-5
@@ -150,21 +150,21 @@ for (GLD2 in 1:length(GUILDS)) {
   
   temp <- P[,c("CNHA","val")]
   save(temp,file=paste0(dir,"/data/prio_overlap.Rdata"))
-    }# end of CHECK if overlap already exists
+    # }# end of CHECK if overlap already exists
   } # end of TRAME exlcusion
     
   # # Check overalp within hectares
-  # GRID[,"sum":= rowSums(GRID[,2:ncol(GRID)],na.rm=T)]
+  # GRID[,"sum":= rowSums(GRID[,2:ncol(GRID)],na.rm=TRUE)]
   # ## Nbr hectares unique entre guildes
   # nrow(GRID[GRID$sum>0,])  # 9145 ha
   
   # # Check overalp within hectares
   # PRE$sum <- NULL
-  # PRE[,"sum":= rowSums(PRE[,3:ncol(PRE)],na.rm=T)]
+  # PRE[,"sum":= rowSums(PRE[,3:ncol(PRE)],na.rm=TRUE)]
   # ## Nbr hectares unique entre guildes
   # nrow(PRE[PRE$sum>0,])  # 108264 ha
   # 
-  # P <- merge(P,setDT(PRE)[sum>0,c("grid.id","sum")],by="grid.id",all.x=T)
+  # P <- merge(P,setDT(PRE)[sum>0,c("grid.id","sum")],by="grid.id",all.x=TRUE)
   # # table(is.na(P$sum))
   cat(paste0("GUILD ",GUILD," - Step 1 - overlap: done in ",round(difftime(Sys.time(),T1,units="mins"),2)," min."), "\n")
    
@@ -173,10 +173,12 @@ for (GLD2 in 1:length(GUILDS)) {
   ########################################################
   pacman::p_load(sf,sp,FNN,tidyverse,data.table,foreach,doParallel,gdistance) 
 
-  ## Check dataset already exists
+  # ## Check dataset already exists
   if (any(grepl("prio_connect",list.files(paste0(dir,"/data"))))) {
    PP <- LOAD("prio_connect","data",dir)
-   P1 <- merge(P,PP,by="CNHA",all.x=T)
+   # load(paste0(dir,"/data/prio_connect.Rdata"))
+   if (nrow(PP)!=nrow(P)) { stop("Connectivity doesn't match with PRED")}
+   P1 <- merge(P,PP,by="CNHA",all.x=TRUE)
    } else  {
   
   ## Read Polygons
@@ -207,7 +209,7 @@ for (GLD2 in 1:length(GUILDS)) {
   }  
   st_geometry(MPTS) <- "geometry"
   # table(st_is_empty(MPTS))
-  # head(MPTS[st_is_empty(MPTS)==T,])
+  # head(MPTS[st_is_empty(MPTS)==TRUE,])
   # summary(MPTS[st_is_empty(MPTS),]$area)
   
   P1 <- P
@@ -222,10 +224,10 @@ for (GLD2 in 1:length(GUILDS)) {
   P1_5km <- setDT(P1)[which(dist.nn<=5000),]
   
   #### if a disaggregated dataset already exist, skip this part
-  if (any(grepl("pred_dsg1000",list.files(path2data)))) {
-   P_d <- LOAD("pred_dsg1000","data",dir=dir) 
-   CENTRO <- st_as_sf(P_d)
-  } else {
+  # if (any(grepl("pred_dsg1000",list.files(path2data)))) {
+  #  P_d <- LOAD("pred_dsg1000","data",dir=dir) 
+  #  CENTRO <- st_as_sf(P_d)
+  # } else {
       # info <- readxl::read_xlsx("C://Dossier_Ervan/Guildes&co/Guildes_revues_ER.xlsx",sheet=1,col_names = TRUE)
       # defrag <- info[which(info$No==GUILD),]$defrag
       st_geometry(P1_5km) <- "centro"
@@ -233,7 +235,7 @@ for (GLD2 in 1:length(GUILDS)) {
       system.time(P1_dsg<-remove.duplicates(P1sp,zero=1000)) # 2.15 heures
       save(P1_dsg,file=paste0(path2data,"/pred_dsg1000.Rdata"))
       CENTRO<- st_as_sf(P1_dsg)
-  }
+  # }
  
   st_crs(CENTRO) <- st_crs(MPTS)
   
@@ -241,7 +243,7 @@ for (GLD2 in 1:length(GUILDS)) {
   
   # Enleve les centro sans polygones ds un rayon de 5 km
   A <- lapply(INTER,function(x) all(is.na(x)))
-  POSI <- which(unlist(A)==T)
+  POSI <- which(unlist(A)==TRUE)
   if (length(POSI) > 0) {
     CENTRO <- CENTRO[-POSI,]  # enl?ve les ha sans polygone ds rayon de 5 km
     INTER[POSI] <- NULL
@@ -251,19 +253,19 @@ for (GLD2 in 1:length(GUILDS)) {
  grid <- raster::raster("D://SIG/data/grid100/grid100.tif")
  # grid_sf <- LOAD("grid100","data")
 
- # for (G in c(3,4,10,12,13,17,19,20,22)){
+ # # for (G in c(2,3,4,10,12,13,17,19,20,22)){
  #  dir <- paste0("C:/Dossier_Ervan/R/",list.files("C:/Dossier_Ervan/R")[grep(paste0("G",G,"-"),list.files("C:/Dossier_Ervan/R"))])
  #  P <- LOAD("qual4leaf","data",dir)
  #  P[,"friction":=1-Wmean]  ## friction 0=suitable/1=unsuitable
  #  P <- within(P,friction[!is.na(ist)]<-0)  ## all obs have a friction of 0 (prob Wmean =1)
  #  ## Merge with Swiss extent (discard lacs)
- #  GRI <- merge(setDT(grid_sf[lac==0,c("CNHA","geometry")]),setDT(P[,c("CNHA","friction")]),by="CNHA",all.x=T)
+ #  GRI <- merge(setDT(grid_sf[lac==0,c("CNHA","geometry")]),setDT(P[,c("CNHA","friction")]),by="CNHA",all.x=TRUE)
  #  GRI <-  GRI[is.na(get("friction")), "friction":=0.99] # set all grid without pred/obs to 0.99
  #  sf::st_geometry(GRI) <- "geometry"
  #  RA <- fasterize::fasterize(GRI,grid,field="friction")
  #  raster::plot(RA)
  #  raster::writeRaster(RA,file=paste0("C:/Dossier_Ervan/R/INFOFAUNA/raster_friction/","g",G,".tif"),format = 'GTiff', options=c("COMPRESS=DEFLATE", "PREDICTOR=2"),overwrite=TRUE)
- #  }
+ # }
  
     ##Import raster friction Infofauna
     d <- "C:/Dossier_Ervan/R/INFOFAUNA/raster_friction"
@@ -279,9 +281,6 @@ for (GLD2 in 1:length(GUILDS)) {
       }
     Q_ra <- projectRaster(Q_ra,crs="+init=epsg:2056",method="ngb")
     writeRaster(Q_ra,paste0("D://SIG/SIG_BAFU/Produits_IE/projection/G",GUILD,"_EG_2056.tif"),format = 'GTiff', options=c("COMPRESS=DEFLATE", "PREDICTOR=2"),overwrite=TRUE)
-    
-  } # end of creation of clusters
-  
   
   #### Compute least cost paths
   registerDoParallel(makeCluster(6)) # Change the number of core
@@ -299,7 +298,7 @@ for (GLD2 in 1:length(GUILDS)) {
       BB <- extent(st_coordinates(origin)[1]-dMAX,st_coordinates(origin)[1]+dMAX,
                    st_coordinates(origin)[2]-dMAX,st_coordinates(origin)[2]+dMAX)
       zoom <- raster::crop(rs,BB)
-      zoom[is.na(zoom)]<-min(getValues(zoom),na.rm=T) # removing NA so as we can get values
+      zoom[is.na(zoom)]<-min(getValues(zoom),na.rm=TRUE) # removing NA so as we can get values
       tr1 <- transition(zoom, transitionFunction=mean, directions=8)
       tr1c <- geoCorrection(tr1)
       A2B <- tryCatch(A2B <- costDistance(tr1c, SpatialPoints(st_coordinates(origin)), st_coordinates(target)),error=function(e) {e})
@@ -326,7 +325,7 @@ for (GLD2 in 1:length(GUILDS)) {
   summary(P1_dsg$connectivity)
   P1_dsg$connectivityOriginal<-P1_dsg$connectivity
   P1_dsg$connectivity<-P1_dsg$connectivity^0.25 # transformation to keep information at a 0-1 scale
-  P1_dsg <- within(P1_dsg,connectivity[connectivity> round(quantile(connectivity,na.rm=T,0.95),2)] <- round(quantile(connectivity,na.rm=T,0.95),2)) # remplace ouliers par le 95e percentile !!! je serais plus conservatif et garderait le 70 percentile -> ce qui est loin n'est pas informatif
+  P1_dsg <- within(P1_dsg,connectivity[connectivity> round(quantile(connectivity,na.rm=TRUE,0.95),2)] <- round(quantile(connectivity,na.rm=TRUE,0.95),2)) # remplace ouliers par le 95e percentile !!! je serais plus conservatif et garderait le 70 percentile -> ce qui est loin n'est pas informatif
 # 
   # PUP <- cbind(as.data.frame(P1_dsg[,c("CNHA","connectivity")] %>% st_drop_geometry()),st_coordinates(P1_dsg))
   # PUP[is.na(PUP)] <- 1
@@ -341,15 +340,15 @@ for (GLD2 in 1:length(GUILDS)) {
   P1$connectivity <- NA
   P1$connectivity[match(P1_5km$CNHA,P1$CNHA)] <- P1_5km$connectivity
   summary(P1$connectivity)
-  temp <- setDT(P1)[,c("CNHA","connectivity")]
-  save(temp,file=paste0(path2data,"/prio_connect.Rdata"))
-    # } # loop to load "prio_connect"
+  PP <- setDT(P1)[,c("CNHA","connectivity")]
+  save(PP,file=paste0(path2data,"/prio_connect.Rdata"))
+  # } # loop to load "prio_connect"
   
   cat(paste0("GUILD ",GUILD," - Step 2 - least cost path: done in ",round(difftime(Sys.time(),T1,units="mins"),2)," min."), "\n")
 
   
   ##########################
-  ##### Donnees historiques
+  ##### Donnees historiques (pas filtrees par EP, mais le merge permet d'avoir des valeurs ds EG)
   ##########################
   require(data.table)
   require(sf)
@@ -381,41 +380,42 @@ for (GLD2 in 1:length(GUILDS)) {
   P[,"connect":=connectivity/max(connectivity,na.rm=TRUE)]
   
   # Lissage par moving window
-  # prio2 <- merge(setDT(P),setDT(grid_sf)[,c("CNHA","grid.id","geometry")],by="CNHA",all.x=T)
+  # prio2 <- merge(setDT(P),setDT(grid_sf)[,c("CNHA","grid.id","geometry")],by="CNHA",all.x=TRUE)
   grid <- raster::raster("D://SIG/data/grid100/grid100.tif")
   st_geometry(P) <- "geometry"
   r <- fasterize::fasterize(P,grid,field="connect") # quality
   
   MW <- matrix(1,11,11)
-  MF <-getValues(focal(r, w=MW, mean,na.rm=T))
+  MF <-getValues(focal(r, w=MW, mean,na.rm=TRUE))
   df <- data.table("grid.id"=getValues(grid),"connectivity"=MF)
-  P <- merge(setDT(P)[,-c("geometry","connectivity")],setDT(df),by="grid.id",all.x=T)
+  P <- merge(setDT(P)[,-c("geometry","connectivity")],setDT(df),by="grid.id",all.x=TRUE)
   
   
-  P[,"historic_quality":=BIOIDX_TXG/max(BIOIDX_TXG,na.rm=T)]
+  P[,"historic_quality":=BIOIDX_TXG/max(BIOIDX_TXG,na.rm=TRUE)]
   
   P[,"env_suitability":=Wmean-min(Wmean)]
   P[,"env_suitability":=env_suitability/max(env_suitability)]
   
   mysum <- function(x){sum(x, na.rm=TRUE)}
-  P[,"consensus":= rowSums(.SD,na.rm=T),.SDcols=c("guild_overlap","connectivity","historic_quality","env_suitability")]
+  P[,"consensus":= rowSums(.SD,na.rm=TRUE),.SDcols=c("guild_overlap","connectivity","historic_quality","env_suitability")]
   summary(P$consensus)
+  table(is.na(P$consensus))
   
   cols <- c("guild_overlap","connectivity","historic_quality","env_suitability","consensus")
   P <- setDT(P)[,(cols) :=round(.SD,2),.SDcols=cols]
   P4 <- setDT(P)[!duplicated(grid.id),c("CNHA", "BV04", "canton", "subreg","guild_overlap","connectivity","historic_quality","env_suitability","consensus","centro")]
   st_geometry(P4) <- "centro"
   save(P4,file=paste0(dir,"/data/",GUILD,"_prio.Rdata"))
- 
-  st_geometry(P4) <- "centro"
-  PPP <- cbind(setDT(P4 %>%  st_drop_geometry()), st_coordinates(P4))
-  PPP[is.na(PPP)] <- 0
-  write.csv(PPP, paste0("D://SIG/SIG_BAFU/priorisation/", GUILD,"_prio.csv"),row.names = F)
-   
-  P4 <- st_transform(P4,2056)
-  P4 <- cbind(as.data.frame(P4 %>% st_drop_geometry()), st_coordinates(P4))
-  P4[is.na(P4)] <- 0
-  write.csv(P4, paste0("D://SIG/SIG_BAFU/priorisation/", GUILD,"_prio_2056.csv"),row.names = F)
+  # 
+  # st_geometry(P4) <- "centro"
+  # PPP <- cbind(setDT(P4 %>%  st_drop_geometry()), st_coordinates(P4))
+  # PPP[is.na(PPP)] <- 0
+  # write.csv(PPP, paste0("D://SIG/SIG_BAFU/priorisation/", GUILD,"_prio.csv"),row.names = F)
+  #  
+  # P4 <- st_transform(P4,2056)
+  # P4 <- cbind(as.data.frame(P4 %>% st_drop_geometry()), st_coordinates(P4))
+  # P4[is.na(P4)] <- 0
+  # write.csv(P4, paste0("D://SIG/SIG_BAFU/priorisation/", GUILD,"_prio_2056.csv"),row.names = F)
    
    
   cat(paste0("GUILD ",GUILD," done in ",round(difftime(Sys.time(),T1,units="mins"),2)," min."),"\n") 
