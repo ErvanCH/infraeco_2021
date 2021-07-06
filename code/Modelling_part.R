@@ -166,7 +166,7 @@ PAR$GBM_para = grid_search[which.max(perf), ]
                          subsample = 1 #valeur par d?faut
   ) ### 162 parameters combinations
   
-  system.time(xgb_model <- train(training[,VAR], as.factor(training$Qobs), trControl = xgb_trcontrol, tuneGrid = xgbGrid, method = "xgbTree",objectiv="binary:logistic",eval_metric='auc'))  # 18 min
+  system.time(xgb_model <- train(training[,..VAR], as.factor(training$Qobs), trControl = xgb_trcontrol, tuneGrid = xgbGrid, method = "xgbTree",objectiv="binary:logistic",eval_metric='auc'))  # 18 min
   PAR$GBM_para<- xgb_model$bestTune
 }  # end of GBM loop 
 

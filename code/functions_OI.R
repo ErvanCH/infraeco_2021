@@ -4,7 +4,18 @@
 #   get(ls()[ls() != "fileName"])
 # }
 
-# Fonction d?sagr?gation IST (Blaise Petitpierre 10/07/2020)
+#' @title IST.dsg
+#' @author Blaise Petitpierre
+#' @description desagregate hectares at a give distance (min.dist)
+#' @param IST is a sf object with observed quality
+#' @param min.dist the minimal distance between two hectares
+#' @param IDX = ??
+#' @return IST with a lower number of hectars (rows)
+#' @export
+#' @examples
+#' # default 
+#' 
+#'  
 IST.dsg<-function(IST,min.dist=300,IDX=NULL){
   require(sp)
   require(data.table)
@@ -1595,3 +1606,6 @@ val.poly <- function(X) {
   RES[which.max(Nsp)]$w <- 1  # force the ref guild to have 1
   return(sum(RES$w))
 }
+
+
+

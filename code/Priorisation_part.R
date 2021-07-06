@@ -8,8 +8,8 @@ pacman::p_load(sf,tidyverse,data.table,raster)
 ## Choose guilds
 # GUILDS <- paste0("G",c(5:8,101))  # trame humide prio
 # GUILDS <- paste0("G",c(14:16,102)) # trame seche prio
-# GUILDS <- paste0("G",c(2,3,4,101)) # guildes non-prio humides
-GUILDS <- paste0("G",c(10,12,13,22,102)) # guildes non-prio sèches
+ GUILDS <- paste0("G",c(2,3,4,101)) # guildes non-prio humides
+# GUILDS <- paste0("G",c(10,12,13,22,102)) # guildes non-prio sèches
 # GUILDS <- paste0("G",c(17,19,101,102)) # trame forêts
 # GUILDS <- paste0("G",c(20,101,102)) # trame prairies seches altitude
 

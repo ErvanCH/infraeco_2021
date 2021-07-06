@@ -5,7 +5,7 @@ source("code/functions_OI.R")
 # LOCATION <- "G://R/"# location of all folders (PC Infoflora)
 LOCATION <- "C://Dossier_Ervan/R/"# location of all folders (IF office)
 
-GUILD <- 10
+GUILD <- 2
 
 # Creating guild space -------------------------------------------------------
 
@@ -97,7 +97,10 @@ GUILD <- 10
   VAR <- TT2$label[!is.na(TT2[,stringr::str_which(names(TT2),paste0("G",GUILD,"$"))])]
   
   ## Projection dans l'espace-guilde (to lower computational time)
-  env.pot <-setDT(grid_sf)[grid.id%in%c(IST$grid.id,eg$grid.id),c("grid.id","BV04","subreg",..VAR)]
+  env.pot <-setDT(grid_sf)[grid.id%in%c(IST$grid.id,eg$grid.id),c("grid.id","BV04","subreg","geometry",..VAR)]
+  if(any(match("riv_debit",VAR))){
+  env.pot <- within(env.pot,riv_debit[is.na(riv_debit) & !is.na(riv_slope)] <- 4)  # for guild 2 (keep large river sections)
+  }
   env.pot <- na.omit(setDT(env.pot)[!duplicated(grid.id),]) 
   
   # nrow(EG) - nrow(env.pot)  # 355 ha perdus sur la fronti?re
@@ -188,7 +191,6 @@ GUILD <- 10
   setDT(res)[is.na(CLUST),c("Nsp_BV","bench_Nsp","Qobs", "Qpred","EB_sp_defrag", "EB_sp_defrag_weighted"):=0]
   st_geometry(res) <- "geometry"
   save(res,file=paste0(dir,"/data/",GUILD,"_ha2add_",format(Sys.time(), '%d-%m-%y'),".RData"))
-
 
 
 # Fachsheet   -------------------------------------------------------
