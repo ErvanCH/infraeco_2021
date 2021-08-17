@@ -396,8 +396,6 @@ GUILD <- 2
     FF <- list.files(dir_if)[grep(paste0("_",GUILD,"_bio-idx"),list.files(dir_if))]
     ist <- data.table::fread(paste(dir_if, FF,sep="/"))
     IST <- merge(setDT(ist),setDT(grid_sf)[,c("CNHA","grid.id","geometry","BV04")],by="CNHA",all.x=TRUE)
-    st_geometry(IST) <- "geometry" 
-    
     setDT(IST)[,"i2":= ifelse(BIOIDX_TXG <= median(BIOIDX_TXG,na.rm=TRUE),"Hohe Qualitat","Sehr hohe Qualitat"),by=.SD]  ## binarize BIOINDEX as per BAFU-VDC layout
     st_geometry(IST) <- "geometry"
     IST <- st_transform(IST,4326)
@@ -407,6 +405,12 @@ GUILD <- 2
     m1 <- m %>%
       addGlPolygons(data = IST, group = "Observed quality (ha)",fillColor=col1,fillOpacity=0.8) %>%
       addLegend(pal =  col11, values=IST$i2,group = "Observed quality (ha)", position = "topright",opacity=2,title="Observed quality (ha)")
+    
+    # Add layer IST (ha) to GPKG
+    # IST2WRITE<-setDT(IST)[,"Quality" := ifelse(BIOIDX_TXG <= median(BIOIDX_TXG,na.rm=TRUE),1,2),by = .SD]
+    # ,
+    #                          "Gilde","Version" := "unreleased_V1","i2","geometry")]
+    # A TERMINER !!! 
     
     ## ADD SOLL
     PRED <-  LOAD("qual4leaf","data",dir)
