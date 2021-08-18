@@ -347,7 +347,7 @@ GUILD <- 2
   
 # Leaflets finaux  -------------------------------------------------------
   
-  pacman::p_load(leafgl,leaflet,leafem,leafpop,data.table,raster,sf,tidyverse)
+  pacman::p_load(leafgl,leaflet,leafem,leafpop,data.table,raster,sf,tidyverse,igraph)
   source("code/functions_OI.R")
   guild <- readxl::read_xlsx("data/Info_guildes.xlsx",sheet=1,col_names = TRUE)
   DATE <- format(Sys.time(), '%d-%m-%y')
@@ -406,11 +406,62 @@ GUILD <- 2
       addGlPolygons(data = IST, group = "Observed quality (ha)",fillColor=col1,fillOpacity=0.8) %>%
       addLegend(pal =  col11, values=IST$i2,group = "Observed quality (ha)", position = "topright",opacity=2,title="Observed quality (ha)")
     
-    # Add layer IST (ha) to GPKG
-    # IST2WRITE<-setDT(IST)[,"Quality" := ifelse(BIOIDX_TXG <= median(BIOIDX_TXG,na.rm=TRUE),1,2),by = .SD]
-    # ,
-    #                          "Gilde","Version" := "unreleased_V1","i2","geometry")]
-    # A TERMINER !!! 
+    # Add layer IST (ha) to GPKG"
+    IST_high<-filter(IST,i2 == "Hohe Qualitat") %>% 
+      st_transform(2056) %>% 
+      st_geometry() 
+    
+    gr = st_intersects(IST_high)
+    Gr = igraph::graph_from_adj_list(gr) 
+    Gr = igraph::components(Gr)$membership %>% 
+      as.data.frame
+    names(Gr)<-"group_var"
+    st_geometry(Gr)<-IST_high
+    
+    IST_high<-aggregate(Gr,by =list(Gr$group_var),FUN = mean) %>% 
+      st_cast("MULTIPOLYGON") %>% 
+      mutate(Quality = 1, 
+             Gilde = "G", 
+             Version = "unrealeased_V1", 
+             Shape_leng = unclass(st_length(st_cast(.,"MULTILINESTRING"))),
+             Shape_area = unclass(st_area(.)),
+             DEQuality = "Hohe Qualität",
+             FRQuality = "Haute qualité ",
+             FRQuality = "High quality", 
+             DEGilde = guild[which(guild$ID==GUILD),]$name_guild_de,
+             FRGilde = guild[which(guild$ID==GUILD),]$name_guild_fr
+             ) %>% 
+      .[,-c(1,2)]
+    
+    IST_vhigh<-filter(IST,i2 == "Sehr hohe Qualitat") %>% 
+      st_transform(2056) %>% 
+      st_geometry() 
+    
+    gr = st_intersects(IST_vhigh)
+    Gr = igraph::graph_from_adj_list(gr) 
+    Gr = igraph::components(Gr)$membership %>% 
+      as.data.frame
+    names(Gr)<-"group_var"
+    st_geometry(Gr)<-IST_vhigh
+    
+    IST_vhigh<-aggregate(Gr,by =list(Gr$group_var),FUN = mean) %>% 
+      st_cast("MULTIPOLYGON") %>% 
+      mutate(Quality = 2, 
+             Gilde = "G", 
+             Version = "unrealeased_V1", 
+             Shape_leng = unclass(st_length(st_cast(.,"MULTILINESTRING"))),
+             Shape_area = unclass(st_area(.)),
+             DEQuality = "Sehr hohe Qualität",
+             FRQuality = "Très haute qualité ",
+             FRQuality = "Very high quality", 
+             DEGilde = guild[which(guild$ID==GUILD),]$name_guild_de,
+             FRGilde = guild[which(guild$ID==GUILD),]$name_guild_fr
+      ) %>% 
+      .[,-c(1,2)]
+    
+    IST2WRITE<-rbind(IST_high,IST_vhigh)
+    
+    write_sf(obj = IST2WRITE, dsn ="D://SIG/SIG_BAFU/GPKG/ObsQualHa.GPKG",layer=paste0("G",GUILD),layer_options = "OVERWRITE=true")
     
     ## ADD SOLL
     PRED <-  LOAD("qual4leaf","data",dir)
