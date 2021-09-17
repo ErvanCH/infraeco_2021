@@ -517,7 +517,10 @@ GUILD <- 2
       m3 <- m2  %>%
       addGlPolygons(data = pol, group = "Observed quality (polygons)",popup="id",fillColor="green",fillOpacity=0.6) %>%
       addLegend(colors ="green",labels=" ",group = "Observed quality (polygons)", position = "topright",opacity=0.6,title="Observed quality (polygons)")
-    }
+        }
+    
+    # Add layer IST (polygons) to GPKG"
+    ### A terminer
     
    
     ### Finalize leaflet
