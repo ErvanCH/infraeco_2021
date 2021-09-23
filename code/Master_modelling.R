@@ -357,6 +357,9 @@ GUILD <- 2
   G <- c(2:4,10,12,13,17,19,20,22)
     
  for (GUILD in G) {
+   if(GUILD<10){guild.id<-paste0('G0',GUILD)}else{
+     guild.id<-paste0('G',GUILD)
+   }
     dir <- paste0("C:/Dossier_Ervan/R/",list.files("C:/Dossier_Ervan/R")[grep(paste0("G",GUILD,"-"),list.files("C:/Dossier_Ervan/R"))])
     bench <- guild[which(guild$ID==GUILD),]$bench
     guild.name <- guild[which(guild$ID==GUILD),]$name_guild_de
@@ -364,14 +367,20 @@ GUILD <- 2
     res <- LOAD("ha2add","data",dir)
     st_geometry(res) <- "geometry"
     
-    # Add layer to GPKG
+    # Add BSS layer to GPKG
     if (GUILD!=20) {  ## Pas de BSS pour la guilde 20
     res2 <- st_transform(res,2056)
     res2 <- col.bin(res2,bench,min.size=5)[[1]]
-    res2$Gilde <- paste0("G",GUILD)
-    res2 <- res2[,c("BV.id","CLUST","sp.in.BV","Nsp_BIOREG","observed_qual", "potential_qual", "Erganzungsbedarf","Gilde","geometry")]
-    names(res2) <- c("WaterCatchmentID","Cluster","SpeciesInWaterCatchment","SpeciesInBiogegraphicalRegion","ObservedQuality","PotentialQuality","AdditionalSurfaceNeeded","Gilde","geometry")
-    write_sf(obj = res2, dsn ="D://SIG/SIG_BAFU/GPKG/BSS.GPKG",layer=paste0("G",GUILD),layer_options = "OVERWRITE=true")
+    res2$Gilde <- guild.id
+    res2 <- res2[,c("BV.id" ,"CLUST","sp.in.BV","Nsp_BIOREG","observed_qual", "potential_qual", "Erganzungsbedarf","Gilde","geometry")]
+    names(res2) <- c("WaterCatch","Cluster","SpeciesInW","SpeciesInB","ObservedQu","PotentialQ","Additional","Gilde","geometry")
+    mutate(res2,Version = 'unreleased_V1', 
+           Shape_Leng = unclass(st_length(st_cast(res2,"MULTILINESTRING"))),
+           Shape_Area = unclass(st_area(res2)),
+           DEGilde = guild[which(guild$ID==GUILD),]$name_guild_de,
+           FRGilde = guild[which(guild$ID==GUILD),]$name_guild_fr)
+    
+           write_sf(obj = res2, dsn ="D://SIG/SIG_BAFU/GPKG/BSS.GPKG",layer=paste0("G",GUILD),layer_options = "OVERWRITE=true")
     }
     
     res2 <- st_transform(res,4326)
@@ -421,7 +430,7 @@ GUILD <- 2
     IST_high<-aggregate(Gr,by =list(Gr$group_var),FUN = mean) %>% 
       st_cast("MULTIPOLYGON") %>% 
       mutate(Quality = 1, 
-             Gilde = "G", 
+             Gilde = paste0("G", 
              Version = "unrealeased_V1", 
              Shape_leng = unclass(st_length(st_cast(.,"MULTILINESTRING"))),
              Shape_area = unclass(st_area(.)),
@@ -449,11 +458,11 @@ GUILD <- 2
       mutate(Quality = 2, 
              Gilde = "G", 
              Version = "unrealeased_V1", 
-             Shape_leng = unclass(st_length(st_cast(.,"MULTILINESTRING"))),
-             Shape_area = unclass(st_area(.)),
+             Shape_Leng = unclass(st_length(st_cast(.,"MULTILINESTRING"))),
+             Shape_Area = unclass(st_area(.)),
              DEQuality = "Sehr hohe Qualität",
              FRQuality = "Très haute qualité ",
-             FRQuality = "Very high quality", 
+             ENQuality = "Very high quality", 
              DEGilde = guild[which(guild$ID==GUILD),]$name_guild_de,
              FRGilde = guild[which(guild$ID==GUILD),]$name_guild_fr
       ) %>% 
@@ -474,7 +483,13 @@ GUILD <- 2
     PRIO$Gilde <- paste0("G",GUILD)
     PRI <- merge(setDT(PRIO)[,c("CNHA", "BV04", "canton", "subreg", "env_suitability","connectivity", "historic_quality", "guild_overlap","Gilde")],setDT(P)[,c("CNHA","geometry")],by="CNHA",all.y=TRUE)
     PRI[is.na(PRI)] <- 0
-    names(PRI) <- c("OBJECTID","WaterCatchmentID","Canton","BiogeographicalSubRegion","EnvironmentalSuitability","Connectivity","HistoricalQuality","GuildOverlap","Gilde","geometry")
+    names(PRI) <- c("OBJECTID","WaterCatchmentID","Canton","BiogeographicalSubRegion","EnvironmentalSuitability","Connectivity","HistoricQuality","GuildOverlap","Gilde","geometry")
+    PRI<-mutate(PRI, id = c(1:nrow(PRI)),
+           Version = "unrealeased_V1",
+           SHAPE_Length = 400, 
+           SHAPE_Area = 10000)
+    PRI<-PRI[,c('id','OBJECTID','Gilde','WaterCatchmentID','Canton', 'BiogeographicalSubRegion', 'GuildOverlap',
+                'Connectivity','HistoricQuality','EnvironmentalSuitability','Version','SHAPE_Length','SHAPE_Area','geometry')]
     st_geometry(PRI) <- "geometry"
     PRI <- st_transform(PRI,2056)
     write_sf(obj = PRI, dsn ="D://SIG/SIG_BAFU/GPKG/PRIO.GPKG",layer=paste0("G",GUILD),layer_options = "OVERWRITE=true")
@@ -520,7 +535,16 @@ GUILD <- 2
         }
     
     # Add layer IST (polygons) to GPKG"
-    ### A terminer
+    pol<-mutate(pol,Gilde = guild.id, 
+                Version = "unrealeased_V1", 
+                Shape_Leng = unclass(st_length(st_cast(pol,"MULTILINESTRING"))),
+                Shape_Area = unclass(st_area(pol)),
+                DEGilde = guild[which(guild$ID==GUILD),]$name_guild_de,
+                FRGilde = guild[which(guild$ID==GUILD),]$name_guild_fr)
+    pol<-pol[,c('Gilde','Version','Shape_Leng','Shape_Area','DEGilde','FRGilde')]
+    pol <- st_transform(pol,2056)
+    
+    write_sf(obj = pol, dsn ="D://SIG/SIG_BAFU/GPKG/ObsQualPoly.GPKG",layer=paste0("G",GUILD),layer_options = "OVERWRITE=true")
     
    
     ### Finalize leaflet
